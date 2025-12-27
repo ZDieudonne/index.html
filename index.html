@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Editions la Reforme - Révolutionnons le Monde de la Littérature</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0066cc;
+            --primary-black: #1a1a1a;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --border-gray: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-black);
+            background: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-black);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1001;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-black) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-black);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Carousel */
+        .carousel {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .carousel-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .carousel-controls {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-gray);
+            display: inline-block;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-blue);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-black);
+            text-align: center;
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Catalog */
+        .catalog-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .catalog-filters select,
+        .catalog-filters input {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .book-card {
+            background: var(--light-gray);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .book-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .book-info {
+            padding: 1rem;
+        }
+
+        .book-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .book-price {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Cart */
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+        }
+
+        .cart-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        /* Authors Grid */
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .author-card {
+            background: var(--light-gray);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .author-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        /* Events Calendar */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background: var(--light-gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .event-info {
+            padding: 1.5rem;
+        }
+
+        /* Blog */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--light-gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: var(--primary-blue);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .newsletter h3 {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-black);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 1rem;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        /* Dashboard */
+        .dashboard {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Currency Selector */
+        .currency-selector {
+            display: inline-block;
+            margin-left: 1rem;
+        }
+
+        /* Formations */
+        .formations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .formation-card {
+            background: var(--light-gray);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Les Editions la Reforme</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#catalogue">Catalogue</a></li>
+                <li><a href="#auteurs">Auteurs</a></li>
+                <li><a href="#actualites">Actualités</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="cart-icon" onclick="toggleCart()">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </li>
+                <li class="currency-selector">
+                    <select id="currencySelect" onchange="changeCurrency()">
+                        <option value="FCFA">FCFA</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="CAD">CAD</option>
+                        <option value="NGN">NGN</option>
+                    </select>
+                </li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="openWhatsApp()">💬</div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <h1>Découvrez de nouvelles lectures</h1>
+        <p>Révolutionnons le Monde de la Littérature</p>
+        <p>Bienvenue sur le site des Éditions La Réforme. Découvrez notre catalogue d'ouvrages, les auteurs qui nous épaulent et suivez nos actualités.</p>
+        <div class="hero-buttons">
+            <a href="#catalogue" class="btn btn-primary">Découvrir le catalogue</a>
+            <a href="#manuscrit" class="btn btn-secondary">Soumettre un manuscrit</a>
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="carousel-inner" id="carouselInner">
+            <div class="carousel-item">
+                <div class="carousel-placeholder">📚 Nouveauté : Collection Printemps 2025</div>
+                <h3>Découvrez nos dernières parutions</h3>
+                <p>Une sélection d'œuvres exceptionnelles de nos auteurs</p>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-placeholder">🎉 Promotion -20% sur tous les romans</div>
+                <h3>Offre spéciale du mois</h3>
+                <p>Profitez de nos réductions exceptionnelles</p>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-placeholder">✍️ Atelier d'écriture créative</div>
+                <h3>Formations disponibles</h3>
+                <p>Rejoignez nos formations pour éveiller l'écrivain qui sommeille en vous</p>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+            <span class="carousel-dot" onclick="goToSlide(1)"></span>
+            <span class="carousel-dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="container">
+        <section>
+            <h2>Notre Mission & Vision</h2>
+            <div class="mission-vision">
+                <div class="card">
+                    <h3>🎯 Notre Mission</h3>
+                    <p>Promouvoir la littérature africaine et donner une voix aux auteurs émergents du Burkina Faso et d'ailleurs. Nous croyons au pouvoir des mots pour transformer les sociétés.</p>
+                </div>
+                <div class="card">
+                    <h3>🌍 Notre Vision</h3>
+                    <p>Devenir la maison d'édition de référence en Afrique de l'Ouest, reconnue pour la qualité de nos publications et notre engagement envers les auteurs locaux.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog -->
+        <section id="catalogue">
+            <h2>📖 Notre Catalogue</h2>
+            <div class="catalog-filters">
+                <select id="genreFilter" onchange="filterBooks()">
+                    <option value="">Tous les genres</option>
+                    <option value="roman">Roman</option>
+                    <option value="essai">Essai</option>
+                    <option value="poesie">Poésie</option>
+                    <option value="jeunesse">Jeunesse</option>
+                </select>
+                <input type="text" id="searchBooks" placeholder="Rechercher un livre..." oninput="filterBooks()">
+            </div>
+            <div class="books-grid" id="booksGrid"></div>
+        </section>
+
+        <!-- Authors -->
+        <section id="auteurs">
+            <h2>✍️ Nos Auteurs</h2>
+            <div class="authors-grid" id="authorsGrid"></div>
+        </section>
+
+        <!-- Blog/News -->
+        <section id="actualites">
+            <h2>📰 Actualités</h2>
+            <div class="blog-grid" id="blogGrid"></div>
+        </section>
+
+        <!-- Events Calendar -->
+        <section id="evenements">
+            <h2>📅 Calendrier des Événements</h2>
+            <div class="events-grid" id="eventsGrid"></div>
+        </section>
+
+        <!-- Formations -->
+        <section id="formations">
+            <h2>🎓 Nos Formations</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Rejoignez nos formations pour éveiller l'écrivain qui sommeille en vous. Pour plus d'informations, n'hésitez pas à nous contacter via nos réseaux sociaux ou par email!</p>
+            <div class="formations-grid" id="formationsGrid"></div>
+        </section>
+
+        <!-- Manuscript Submission -->
+        <section id="manuscrit">
+            <h2>📝 Soumettre un Manuscrit</h2>
+            <div class="card">
+                <p style="text-align: center; margin-bottom: 2rem;">Soumission gratuite - Nous répondons sous 30 jours</p>
+                <form id="manuscriptForm">
+                    <div class="form-group">
+                        <label>Nom complet *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>WhatsApp * (obligatoire)</label>
+                        <input type="tel" required placeholder="+226 XX XX XX XX">
+                    </div>
+                    <div class="form-group">
+                        <label>Titre du manuscrit *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Genre *</label>
+                        <select required>
+                            <option value="">Sélectionner</option>
+                            <option>Roman</option>
+                            <option>Essai</option>
+                            <option>Poésie</option>
+                            <option>Jeunesse</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Résumé (500 mots max) *</label>
+                        <textarea required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Fichier (PDF ou Word) *</label>
+                        <input type="file" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le manuscrit</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>📞 Nous Contacter</h2>
+            <div class="mission-vision">
+                <div class="card">
+                    <h3>Coordonnées</h3>
+                    <p><strong>Email:</strong> lareforme27@gmail.com</p>
+                    <p><strong>Téléphone:</strong> 75.79.54.44</p>
+                    <p><strong>WhatsApp:</strong> 71.67.18.01</p>
+                    <p><strong>Localisation:</strong> Koudougou, secteur 9, Burkina Faso</p>
+                </div>
+                <div class="card">
+                    <h3>Paiements Mobile Money</h3>
+                    <p><strong>Orange Money:</strong> 75.79.54.44</p>
+                    <p><strong>Moov Money:</strong> 71.67.18.01</p>
+                    <h3 style="margin-top: 1rem;">Réseaux Sociaux</h3>
+                    <p>Facebook | WhatsApp Business | LinkedIn</p>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Formulaire de Contact</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Nom *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <h3>📧 Newsletter</h3>
+            <p>Restez informé de nos nouveautés et actualités</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit" class="btn btn-secondary">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <h2>🛒 Mon Panier</h2>
+            <div id="cartItems"></div>
+            <div style="margin-top: 2rem; padding-top: 1rem; border-top: 2px solid var(--border-gray);">
+                <p><strong>Sous-total:</strong> <span id="cartSubtotal">0</span></p>
+                <p><strong>Frais de livraison:</strong> <span id="shippingFee">Gratuit</span></p>
+                <p style="font-size: 1.5rem;"><strong>Total:</strong> <span id="cartTotal">0</span></p>
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label>Pays de livraison</label>
+                    <select id="shippingCountry" onchange="updateShipping()">
+                        <option value="BF">Burkina Faso (Gratuit)</option>
+                        <option value="international">International</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mode de paiement</label>
+                    <select id="paymentMethod">
+                        <option value="orange">Orange Money</option>
+                        <option value="moov">Moov Money</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="processPayment()" style="width: 100%; margin-top: 1rem;">Procéder au paiement</button>
+                <button class="btn btn-secondary" onclick="toggleCart()" style="width: 100%; margin-top: 0.5rem;">Continuer mes achats</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Les Editions la Reforme</h3>
+                <p>Révolutionnons le Monde de la Littérature</p>
+                <p>Koudougou, Burkina Faso</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <a href="#accueil">Accueil</a>
+                <a href="#catalogue">Catalogue</a>
+                <a href="#auteurs">Auteurs</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <a href="#mentions">Mentions légales</a>
+                <a href="#cgv">CGV</a>
+                <a href="#presse">Kit Presse</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: lareforme27@gmail.com</p>
+                <p>Tél: 75.79.54.44</p>
+                <p>WhatsApp: 71.67.18.01</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Les Editions la Reforme. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data
+        const exchangeRates = {
+            FCFA: 1,
+            USD: 0.0016,
+            EUR: 0.0015,
+            GBP: 0.0013,
+            CAD: 0.0022,
+            NGN: 1.35
+        };
+
+        let currentCurrency = 'FCFA';
+        let cart = [];
+        let currentSlide = 0;
+
+        const books = [
+            { id: 1, title: 'Le Souffle du Sahel', author: 'Aminata Traoré', genre: 'roman', price: 5000, year: 2024, format: ['physical', 'pdf'] },
+            { id: 2, title: 'Poèmes du Crépuscule', author: 'Boubacar Zongo', genre: 'poesie', price: 3500, year: 2023, format: ['physical', 'pdf'] },
+            { id: 3, title: 'Essai sur la Démocratie', author: 'Salif Diallo', genre: 'essai', price: 6000, year: 2024, format: ['physical'] },
+            { id: 4, title: 'Contes de Koudougou', author: 'Marie Ouedraogo', genre: 'jeunesse', price: 4000, year: 2023, format: ['physical', 'pdf'] },
+            { id: 5, title: 'Les Gardiens de la Savane', author: 'Ibrahim Sankara', genre: 'roman', price: 5500, year: 2024, format: ['physical', 'pdf'] },
+            { id: 6, title: 'Vers l\'Aube Nouvelle', author: 'Fatou Compaoré', genre: 'poesie', price: 3000, year: 2024, format: ['pdf'] }
+        ];
+
+        const authors = [
+            { name: 'Aminata Traoré', bio: 'Romancière reconnue, spécialisée dans la littérature contemporaine africaine.', books: ['Le Souffle du Sahel'] },
+            { name: 'Boubacar Zongo', bio: 'Poète et conteur, célèbre pour ses œuvres inspirées du folklore burkinabè.', books: ['Poèmes du Crépuscule'] },
+            { name: 'Salif Diallo', bio: 'Essayiste et philosophe, engagé dans les questions de démocratie.', books: ['Essai sur la Démocratie'] },
+            { name: 'Marie Ouedraogo', bio: 'Auteure jeunesse primée, passionnée par les contes traditionnels.', books: ['Contes de Koudougou'] }
+        ];
+
+        const blogPosts = [
+            { title: 'Dédicace à Ouagadougou', date: '15 janvier 2025', excerpt: 'Rencontre avec nos auteurs lors du salon du livre.' },
+            { title: 'Concours de nouvelles 2025', date: '10 janvier 2025', excerpt: 'Participez à notre concours annuel de nouvelles.' },
+            { title: 'Nouveau partenariat', date: '5 janvier 2025', excerpt: 'Les Editions la Reforme s\'associent avec des librairies locales.' }
+        ];
+
+        const events = [
+            { title: 'Salon du Livre de Ouagadougou', date: '15-20 février 2025', location: 'Ouagadougou' },
+            { title: 'Atelier d\'écriture créative', date: '5 mars 2025', location: 'Koudougou' },
+            { title: 'Dédicace - Aminata Traoré', date: '12 mars 2025', location: 'Bobo-Dioulasso' }
+        ];
+
+        const formations = [
+            { title: 'Atelier d\'écriture créative', description: 'Apprenez les bases de l\'écriture créative avec nos experts.', duration: '4 semaines', price: 25000 },
+            { title: 'Masterclass : Roman africain', description: 'Découvrez les spécificités du roman africain contemporain.', duration: '2 jours', price: 15000 },
+            { title: 'Formation édition numérique', description: 'Maîtrisez les outils de publication numérique.', duration: '3 semaines', price: 30000 }
+        ];
+
+        // Initialize
+        function init() {
+            renderBooks();
+            renderAuthors();
+            renderBlog();
+            renderEvents();
+            renderFormations();
+            startCarousel();
+            loadCart();
+        }
+
+        // Carousel
+        function startCarousel() {
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % 3;
+                goToSlide(currentSlide);
+            }, 5000);
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            const carousel = document.getElementById('carouselInner');
+            carousel.style.transform = `translateX(-${n * 100}%)`;
+            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === n);
+            });
+        }
+
+        // Currency
+        function changeCurrency() {
+            currentCurrency = document.getElementById('currencySelect').value;
+            renderBooks();
+            updateCart();
+        }
+
+        function formatPrice(price) {
+            const converted = price * exchangeRates[currentCurrency];
+            const symbols = { FCFA: ' FCFA', USD: ', EUR: '€', GBP: '£', CAD: 'CAD, NGN: '₦' };
+            return currentCurrency === 'FCFA' || currentCurrency === 'NGN' 
+                ? Math.round(converted) + symbols[currentCurrency]
+                : symbols[currentCurrency] + converted.toFixed(2);
+        }
+
+        // Render functions
+        function renderBooks() {
+            const grid = document.getElementById('booksGrid');
+            const genre = document.getElementById('genreFilter').value;
+            const search = document.getElementById('searchBooks').value.toLowerCase();
+            
+            const filtered = books.filter(book => {
+                const matchGenre = !genre || book.genre === genre;
+                const matchSearch = !search || book.title.toLowerCase().includes(search) || book.author.toLowerCase().includes(search);
+                return matchGenre && matchSearch;
+            });
+
+            grid.innerHTML = filtered.map(book => `
+                <div class="book-card">
+                    <div class="book-image">📖 ${book.title}</div>
+                    <div class="book-info">
+                        <h3>${book.title}</h3>
+                        <p><strong>Auteur:</strong> ${book.author}</p>
+                        <p><strong>Genre:</strong> ${book.genre}</p>
+                        <p><strong>Année:</strong> ${book.year}</p>
+                        <div class="book-price">${formatPrice(book.price)}</div>
+                        ${book.format.includes('pdf') ? '<p>📥 Format PDF disponible</p>' : ''}
+                        <button class="btn btn-primary" onclick="addToCart(${book.id})" style="width: 100%;">Ajouter au panier</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderAuthors() {
+            const grid = document.getElementById('authorsGrid');
+            grid.innerHTML = authors.map(author => `
+                <div class="author-card">
+                    <div class="author-image">👤</div>
+                    <h3>${author.name}</h3>
+                    <p>${author.bio}</p>
+                    <p><strong>Ouvrages:</strong> ${author.books.join(', ')}</p>
+                </div>
+            `).join('');
+        }
+
+        function renderBlog() {
+            const grid = document.getElementById('blogGrid');
+            grid.innerHTML = blogPosts.map(post => `
+                <div class="blog-card">
+                    <div class="blog-image">📰 ${post.title}</div>
+                    <div class="blog-content">
+                        <h3>${post.title}</h3>
+                        <p><strong>${post.date}</strong></p>
+                        <p>${post.excerpt}</p>
+                        <button class="btn btn-primary">Lire la suite</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderEvents() {
+            const grid = document.getElementById('eventsGrid');
+            grid.innerHTML = events.map(event => `
+                <div class="event-card">
+                    <div class="event-image">📅 ${event.title}</div>
+                    <div class="event-info">
+                        <h3>${event.title}</h3>
+                        <p><strong>Date:</strong> ${event.date}</p>
+                        <p><strong>Lieu:</strong> ${event.location}</p>
+                        <button class="btn btn-primary">S'inscrire</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderFormations() {
+            const grid = document.getElementById('formationsGrid');
+            grid.innerHTML = formations.map(formation => `
+                <div class="formation-card">
+                    <h3>${formation.title}</h3>
+                    <p>${formation.description}</p>
+                    <p><strong>Durée:</strong> ${formation.duration}</p>
+                    <p><strong>Prix:</strong> ${formatPrice(formation.price)}</p>
+                    <button class="btn btn-primary">S'inscrire</button>
+                </div>
+            `).join('');
+        }
+
+        function filterBooks() {
+            renderBooks();
+        }
+
+        // Cart functions
+        function addToCart(bookId) {
+            const book = books.find(b => b.id === bookId);
+            const existing = cart.find(item => item.id === bookId);
+            
+            if (existing) {
+                existing.quantity++;
+            } else {
+                cart.push({ ...book, quantity: 1 });
+            }
+            
+            saveCart();
+            updateCart();
+            alert(`"${book.title}" ajouté au panier!`);
+        }
+
+        function removeFromCart(bookId) {
+            cart = cart.filter(item => item.id !== bookId);
+            saveCart();
+            updateCart();
+        }
+
+        function updateQuantity(bookId, delta) {
+            const item = cart.find(i => i.id === bookId);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    removeFromCart(bookId);
+                } else {
+                    saveCart();
+                    updateCart();
+                }
+            }
+        }
+
+        function updateCart() {
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = count;
+            
+            const itemsDiv = document.getElementById('cartItems');
+            if (cart.length === 0) {
+                itemsDiv.innerHTML = '<p>Votre panier est vide</p>';
+            } else {
+                itemsDiv.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div>
+                            <strong>${item.title}</strong><br>
+                            ${formatPrice(item.price)} × ${item.quantity}
+                        </div>
+                        <div>
+                            <button onclick="updateQuantity(${item.id}, -1)">-</button>
+                            <button onclick="updateQuantity(${item.id}, 1)">+</button>
+                            <button onclick="removeFromCart(${item.id})">🗑️</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+            
+            updateShipping();
+        }
+
+        function updateShipping() {
+            const subtotal = cart.reduce((sum, item) => item.price * item.quantity + sum, 0);
+            const country = document.getElementById('shippingCountry').value;
+            const bookCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            
+            let shipping = 0;
+            if (country === 'international') {
+                shipping = bookCount >= 10 ? 0 : 5000;
+            }
+            
+            const total = subtotal + shipping;
+            
+            document.getElementById('cartSubtotal').textContent = formatPrice(subtotal);
+            document.getElementById('shippingFee').textContent = shipping === 0 ? 'Gratuit' : formatPrice(shipping);
+            document.getElementById('cartTotal').textContent = formatPrice(total);
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function saveCart() {
+            try {
+                const cartData = JSON.stringify(cart);
+                document.cookie = `cart=${cartData}; path=/; max-age=604800`;
+            } catch (e) {
+                console.log('Cart saved in session');
+            }
+        }
+
+        function loadCart() {
+            try {
+                const cookies = document.cookie.split(';');
+                const cartCookie = cookies.find(c => c.trim().startsWith('cart='));
+                if (cartCookie) {
+                    cart = JSON.parse(cartCookie.split('=')[1]);
+                    updateCart();
+                }
+            } catch (e) {
+                cart = [];
+            }
+        }
+
+        function processPayment() {
+            if (cart.length === 0) {
+                alert('Votre panier est vide!');
+                return;
+            }
+            
+            const method = document.getElementById('paymentMethod').value;
+            const total = cart.reduce((sum, item) => item.price * item.quantity + sum, 0);
+            const country = document.getElementById('shippingCountry').value;
+            
+            let methodName = method === 'orange' ? 'Orange Money' : method === 'moov' ? 'Moov Money' : 'PayPal';
+            
+            alert(`Paiement de ${formatPrice(total)} via ${methodName}\n\nCommande confirmée! Vous recevrez un email de confirmation avec les détails de livraison.`);
+            
+            // Generate invoice
+            generateInvoice();
+            
+            // Clear cart
+            cart = [];
+            saveCart();
+            updateCart();
+            toggleCart();
+        }
+
+        function generateInvoice() {
+            const invoiceContent = `
+FACTURE - Les Editions la Reforme
+================================
+Date: ${new Date().toLocaleDateString('fr-FR')}
+
+Articles:
+${cart.map(item => `- ${item.title} × ${item.quantity}: ${formatPrice(item.price * item.quantity)}`).join('\n')}
+
+Total: ${formatPrice(cart.reduce((sum, item) => item.price * item.quantity + sum, 0))}
+
+Merci de votre commande!
+            `;
+            
+            console.log('Facture générée:', invoiceContent);
+            alert('Facture générée! (Consultez la console pour les détails)');
+        }
+
+        // Forms
+        document.getElementById('manuscriptForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Merci pour votre soumission! Nous examinerons votre manuscrit et vous contacterons sous 30 jours par email et WhatsApp.');
+            e.target.reset();
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message envoyé! Nous vous répondrons dans les plus brefs délais.');
+            e.target.reset();
+        });
+
+        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Inscription réussie! Vous recevrez nos prochaines newsletters.');
+            e.target.reset();
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // WhatsApp
+        function openWhatsApp() {
+            window.open('https://wa.me/22671671801', '_blank');
+        }
+
+        // Close cart when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('cartModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
