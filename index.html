@@ -1,1274 +1,3230 @@
-<!DOCTYPE html>
-<html lang="fr">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Editions la Reforme - Révolutionnons le Monde de la Littérature</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
 
-        :root {
-            --primary-blue: #0066cc;
-            --primary-black: #1a1a1a;
-            --white: #ffffff;
-            --light-gray: #f5f5f5;
-            --border-gray: #e0e0e0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--primary-black);
-            background: var(--white);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--primary-black);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-blue);
-        }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            z-index: 1001;
-            transition: transform 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-black) 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: var(--primary-blue);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--primary-black);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        /* Carousel */
-        .carousel {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            background: var(--light-gray);
-            padding: 3rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .carousel-placeholder {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .carousel-controls {
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--border-gray);
-            display: inline-block;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .carousel-dot.active {
-            background: var(--primary-blue);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-black);
-            text-align: center;
-        }
-
-        /* Mission & Vision */
-        .mission-vision {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: var(--light-gray);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        /* Catalog */
-        .catalog-filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .catalog-filters select,
-        .catalog-filters input {
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border-gray);
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .book-card {
-            background: var(--light-gray);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-        .book-image {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .book-info {
-            padding: 1rem;
-        }
-
-        .book-info h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .book-price {
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-
-        /* Forms */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid var(--border-gray);
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        /* Cart */
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: red;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-        }
-
-        .cart-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 2000;
-        }
-
-        .cart-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-gray);
-        }
-
-        /* Authors Grid */
-        .authors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .author-card {
-            background: var(--light-gray);
-            border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .author-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-        }
-
-        /* Events Calendar */
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .event-card {
-            background: var(--light-gray);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .event-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .event-info {
-            padding: 1.5rem;
-        }
-
-        /* Blog */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-card {
-            background: var(--light-gray);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .blog-content {
-            padding: 1.5rem;
-        }
-
-        /* Newsletter */
-        .newsletter {
-            background: var(--primary-blue);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .newsletter h3 {
-            margin-bottom: 1rem;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 1rem;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 0.75rem;
-            border: none;
-            border-radius: 5px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-black);
-            color: white;
-            padding: 3rem 2rem 1rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-blue);
-        }
-
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary-blue);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                padding: 1rem;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-        }
-
-        /* Dashboard */
-        .dashboard {
-            background: var(--light-gray);
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-blue);
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        /* Currency Selector */
-        .currency-selector {
-            display: inline-block;
-            margin-left: 1rem;
-        }
-
-        /* Formations */
-        .formations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .formation-card {
-            background: var(--light-gray);
-            border-radius: 10px;
-            padding: 2rem;
-        }
-    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Les Editions la Reforme</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#catalogue">Catalogue</a></li>
-                <li><a href="#auteurs">Auteurs</a></li>
-                <li><a href="#actualites">Actualités</a></li>
-                <li><a href="#formations">Formations</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="cart-icon" onclick="toggleCart()">
-                    🛒 <span class="cart-count" id="cartCount">0</span>
-                </li>
-                <li class="currency-selector">
-                    <select id="currencySelect" onchange="changeCurrency()">
-                        <option value="FCFA">FCFA</option>
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
-                        <option value="CAD">CAD</option>
-                        <option value="NGN">NGN</option>
-                    </select>
-                </li>
-            </ul>
-            <div class="mobile-menu" onclick="toggleMenu()">☰</div>
-        </div>
-    </nav>
 
-    <!-- WhatsApp Float Button -->
-    <div class="whatsapp-float" onclick="openWhatsApp()">💬</div>
+<body lang=FR link="#0563C1" vlink="#954F72">
 
-    <!-- Hero Section -->
-    <section class="hero" id="accueil">
-        <h1>Découvrez de nouvelles lectures</h1>
-        <p>Révolutionnons le Monde de la Littérature</p>
-        <p>Bienvenue sur le site des Éditions La Réforme. Découvrez notre catalogue d'ouvrages, les auteurs qui nous épaulent et suivez nos actualités.</p>
-        <div class="hero-buttons">
-            <a href="#catalogue" class="btn btn-primary">Découvrir le catalogue</a>
-            <a href="#manuscrit" class="btn btn-secondary">Soumettre un manuscrit</a>
-        </div>
-    </section>
+<div class=WordSection1>
 
-    <!-- Carousel -->
-    <div class="carousel">
-        <div class="carousel-inner" id="carouselInner">
-            <div class="carousel-item">
-                <div class="carousel-placeholder">📚 Nouveauté : Collection Printemps 2025</div>
-                <h3>Découvrez nos dernières parutions</h3>
-                <p>Une sélection d'œuvres exceptionnelles de nos auteurs</p>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-placeholder">🎉 Promotion -20% sur tous les romans</div>
-                <h3>Offre spéciale du mois</h3>
-                <p>Profitez de nos réductions exceptionnelles</p>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-placeholder">✍️ Atelier d'écriture créative</div>
-                <h3>Formations disponibles</h3>
-                <p>Rejoignez nos formations pour éveiller l'écrivain qui sommeille en vous</p>
-            </div>
-        </div>
-        <div class="carousel-controls">
-            <span class="carousel-dot active" onclick="goToSlide(0)"></span>
-            <span class="carousel-dot" onclick="goToSlide(1)"></span>
-            <span class="carousel-dot" onclick="goToSlide(2)"></span>
-        </div>
-    </div>
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
 
-    <!-- Mission & Vision -->
-    <div class="container">
-        <section>
-            <h2>Notre Mission & Vision</h2>
-            <div class="mission-vision">
-                <div class="card">
-                    <h3>🎯 Notre Mission</h3>
-                    <p>Promouvoir la littérature africaine et donner une voix aux auteurs émergents du Burkina Faso et d'ailleurs. Nous croyons au pouvoir des mots pour transformer les sociétés.</p>
-                </div>
-                <div class="card">
-                    <h3>🌍 Notre Vision</h3>
-                    <p>Devenir la maison d'édition de référence en Afrique de l'Ouest, reconnue pour la qualité de nos publications et notre engagement envers les auteurs locaux.</p>
-                </div>
-            </div>
-        </section>
+<p class=MsoNormal>&lt;html lang=&quot;fr&quot;&gt;</p>
 
-        <!-- Catalog -->
-        <section id="catalogue">
-            <h2>📖 Notre Catalogue</h2>
-            <div class="catalog-filters">
-                <select id="genreFilter" onchange="filterBooks()">
-                    <option value="">Tous les genres</option>
-                    <option value="roman">Roman</option>
-                    <option value="essai">Essai</option>
-                    <option value="poesie">Poésie</option>
-                    <option value="jeunesse">Jeunesse</option>
-                </select>
-                <input type="text" id="searchBooks" placeholder="Rechercher un livre..." oninput="filterBooks()">
-            </div>
-            <div class="books-grid" id="booksGrid"></div>
-        </section>
+<p class=MsoNormal>&lt;head&gt;</p>
 
-        <!-- Authors -->
-        <section id="auteurs">
-            <h2>✍️ Nos Auteurs</h2>
-            <div class="authors-grid" id="authorsGrid"></div>
-        </section>
+<p class=MsoNormal>    &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
 
-        <!-- Blog/News -->
-        <section id="actualites">
-            <h2>📰 Actualités</h2>
-            <div class="blog-grid" id="blogGrid"></div>
-        </section>
+<p class=MsoNormal>    &lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
 
-        <!-- Events Calendar -->
-        <section id="evenements">
-            <h2>📅 Calendrier des Événements</h2>
-            <div class="events-grid" id="eventsGrid"></div>
-        </section>
+<p class=MsoNormal>    &lt;title&gt;Les Editions la Reforme - Révolutionnons le
+Monde de la Littérature&lt;/title&gt;</p>
 
-        <!-- Formations -->
-        <section id="formations">
-            <h2>🎓 Nos Formations</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Rejoignez nos formations pour éveiller l'écrivain qui sommeille en vous. Pour plus d'informations, n'hésitez pas à nous contacter via nos réseaux sociaux ou par email!</p>
-            <div class="formations-grid" id="formationsGrid"></div>
-        </section>
+<p class=MsoNormal>    &lt;style&gt;</p>
 
-        <!-- Manuscript Submission -->
-        <section id="manuscrit">
-            <h2>📝 Soumettre un Manuscrit</h2>
-            <div class="card">
-                <p style="text-align: center; margin-bottom: 2rem;">Soumission gratuite - Nous répondons sous 30 jours</p>
-                <form id="manuscriptForm">
-                    <div class="form-group">
-                        <label>Nom complet *</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>WhatsApp * (obligatoire)</label>
-                        <input type="tel" required placeholder="+226 XX XX XX XX">
-                    </div>
-                    <div class="form-group">
-                        <label>Titre du manuscrit *</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Genre *</label>
-                        <select required>
-                            <option value="">Sélectionner</option>
-                            <option>Roman</option>
-                            <option>Essai</option>
-                            <option>Poésie</option>
-                            <option>Jeunesse</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Résumé (500 mots max) *</label>
-                        <textarea required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Fichier (PDF ou Word) *</label>
-                        <input type="file" accept=".pdf,.doc,.docx" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer le manuscrit</button>
-                </form>
-            </div>
-        </section>
+<p class=MsoNormal>        * {</p>
 
-        <!-- Contact -->
-        <section id="contact">
-            <h2>📞 Nous Contacter</h2>
-            <div class="mission-vision">
-                <div class="card">
-                    <h3>Coordonnées</h3>
-                    <p><strong>Email:</strong> lareforme27@gmail.com</p>
-                    <p><strong>Téléphone:</strong> 75.79.54.44</p>
-                    <p><strong>WhatsApp:</strong> 71.67.18.01</p>
-                    <p><strong>Localisation:</strong> Koudougou, secteur 9, Burkina Faso</p>
-                </div>
-                <div class="card">
-                    <h3>Paiements Mobile Money</h3>
-                    <p><strong>Orange Money:</strong> 75.79.54.44</p>
-                    <p><strong>Moov Money:</strong> 71.67.18.01</p>
-                    <h3 style="margin-top: 1rem;">Réseaux Sociaux</h3>
-                    <p>Facebook | WhatsApp Business | LinkedIn</p>
-                </div>
-            </div>
-            <div class="card" style="margin-top: 2rem;">
-                <h3>Formulaire de Contact</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label>Nom *</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Message *</label>
-                        <textarea required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                </form>
-            </div>
-        </section>
+<p class=MsoNormal>            margin: 0;</p>
 
-        <!-- Newsletter -->
-        <div class="newsletter">
-            <h3>📧 Newsletter</h3>
-            <p>Restez informé de nos nouveautés et actualités</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" placeholder="Votre email" required>
-                <button type="submit" class="btn btn-secondary">S'inscrire</button>
-            </form>
-        </div>
-    </div>
+<p class=MsoNormal>            padding: 0;</p>
 
-    <!-- Cart Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-content">
-            <h2>🛒 Mon Panier</h2>
-            <div id="cartItems"></div>
-            <div style="margin-top: 2rem; padding-top: 1rem; border-top: 2px solid var(--border-gray);">
-                <p><strong>Sous-total:</strong> <span id="cartSubtotal">0</span></p>
-                <p><strong>Frais de livraison:</strong> <span id="shippingFee">Gratuit</span></p>
-                <p style="font-size: 1.5rem;"><strong>Total:</strong> <span id="cartTotal">0</span></p>
-                <div class="form-group" style="margin-top: 1rem;">
-                    <label>Pays de livraison</label>
-                    <select id="shippingCountry" onchange="updateShipping()">
-                        <option value="BF">Burkina Faso (Gratuit)</option>
-                        <option value="international">International</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Mode de paiement</label>
-                    <select id="paymentMethod">
-                        <option value="orange">Orange Money</option>
-                        <option value="moov">Moov Money</option>
-                        <option value="paypal">PayPal</option>
-                    </select>
-                </div>
-                <button class="btn btn-primary" onclick="processPayment()" style="width: 100%; margin-top: 1rem;">Procéder au paiement</button>
-                <button class="btn btn-secondary" onclick="toggleCart()" style="width: 100%; margin-top: 0.5rem;">Continuer mes achats</button>
-            </div>
-        </div>
-    </div>
+<p class=MsoNormal>            box-sizing: border-box;</p>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Les Editions la Reforme</h3>
-                <p>Révolutionnons le Monde de la Littérature</p>
-                <p>Koudougou, Burkina Faso</p>
-            </div>
-            <div class="footer-section">
-                <h3>Liens Rapides</h3>
-                <a href="#accueil">Accueil</a>
-                <a href="#catalogue">Catalogue</a>
-                <a href="#auteurs">Auteurs</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-section">
-                <h3>Informations</h3>
-                <a href="#mentions">Mentions légales</a>
-                <a href="#cgv">CGV</a>
-                <a href="#presse">Kit Presse</a>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: lareforme27@gmail.com</p>
-                <p>Tél: 75.79.54.44</p>
-                <p>WhatsApp: 71.67.18.01</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Les Editions la Reforme. Tous droits réservés.</p>
-        </div>
-    </footer>
+<p class=MsoNormal>        }</p>
 
-    <script>
-        // Data
-        const exchangeRates = {
-            FCFA: 1,
-            USD: 0.0016,
-            EUR: 0.0015,
-            GBP: 0.0013,
-            CAD: 0.0022,
-            NGN: 1.35
-        };
+<p class=MsoNormal>&nbsp;</p>
 
-        let currentCurrency = 'FCFA';
-        let cart = [];
-        let currentSlide = 0;
+<p class=MsoNormal>        :root {</p>
 
-        const books = [
-            { id: 1, title: 'Le Souffle du Sahel', author: 'Aminata Traoré', genre: 'roman', price: 5000, year: 2024, format: ['physical', 'pdf'] },
-            { id: 2, title: 'Poèmes du Crépuscule', author: 'Boubacar Zongo', genre: 'poesie', price: 3500, year: 2023, format: ['physical', 'pdf'] },
-            { id: 3, title: 'Essai sur la Démocratie', author: 'Salif Diallo', genre: 'essai', price: 6000, year: 2024, format: ['physical'] },
-            { id: 4, title: 'Contes de Koudougou', author: 'Marie Ouedraogo', genre: 'jeunesse', price: 4000, year: 2023, format: ['physical', 'pdf'] },
-            { id: 5, title: 'Les Gardiens de la Savane', author: 'Ibrahim Sankara', genre: 'roman', price: 5500, year: 2024, format: ['physical', 'pdf'] },
-            { id: 6, title: 'Vers l\'Aube Nouvelle', author: 'Fatou Compaoré', genre: 'poesie', price: 3000, year: 2024, format: ['pdf'] }
-        ];
+<p class=MsoNormal>            --primary-blue: #0066cc;</p>
 
-        const authors = [
-            { name: 'Aminata Traoré', bio: 'Romancière reconnue, spécialisée dans la littérature contemporaine africaine.', books: ['Le Souffle du Sahel'] },
-            { name: 'Boubacar Zongo', bio: 'Poète et conteur, célèbre pour ses œuvres inspirées du folklore burkinabè.', books: ['Poèmes du Crépuscule'] },
-            { name: 'Salif Diallo', bio: 'Essayiste et philosophe, engagé dans les questions de démocratie.', books: ['Essai sur la Démocratie'] },
-            { name: 'Marie Ouedraogo', bio: 'Auteure jeunesse primée, passionnée par les contes traditionnels.', books: ['Contes de Koudougou'] }
-        ];
+<p class=MsoNormal>            --primary-black: #1a1a1a;</p>
 
-        const blogPosts = [
-            { title: 'Dédicace à Ouagadougou', date: '15 janvier 2025', excerpt: 'Rencontre avec nos auteurs lors du salon du livre.' },
-            { title: 'Concours de nouvelles 2025', date: '10 janvier 2025', excerpt: 'Participez à notre concours annuel de nouvelles.' },
-            { title: 'Nouveau partenariat', date: '5 janvier 2025', excerpt: 'Les Editions la Reforme s\'associent avec des librairies locales.' }
-        ];
+<p class=MsoNormal>            --white: #ffffff;</p>
 
-        const events = [
-            { title: 'Salon du Livre de Ouagadougou', date: '15-20 février 2025', location: 'Ouagadougou' },
-            { title: 'Atelier d\'écriture créative', date: '5 mars 2025', location: 'Koudougou' },
-            { title: 'Dédicace - Aminata Traoré', date: '12 mars 2025', location: 'Bobo-Dioulasso' }
-        ];
+<p class=MsoNormal>            --light-gray: #f5f5f5;</p>
 
-        const formations = [
-            { title: 'Atelier d\'écriture créative', description: 'Apprenez les bases de l\'écriture créative avec nos experts.', duration: '4 semaines', price: 25000 },
-            { title: 'Masterclass : Roman africain', description: 'Découvrez les spécificités du roman africain contemporain.', duration: '2 jours', price: 15000 },
-            { title: 'Formation édition numérique', description: 'Maîtrisez les outils de publication numérique.', duration: '3 semaines', price: 30000 }
-        ];
+<p class=MsoNormal>            --border-gray: #e0e0e0;</p>
 
-        // Initialize
-        function init() {
-            renderBooks();
-            renderAuthors();
-            renderBlog();
-            renderEvents();
-            renderFormations();
-            startCarousel();
-            loadCart();
-        }
+<p class=MsoNormal>        }</p>
 
-        // Carousel
-        function startCarousel() {
-            setInterval(() => {
-                currentSlide = (currentSlide + 1) % 3;
-                goToSlide(currentSlide);
-            }, 5000);
-        }
+<p class=MsoNormal>&nbsp;</p>
 
-        function goToSlide(n) {
-            currentSlide = n;
-            const carousel = document.getElementById('carouselInner');
-            carousel.style.transform = `translateX(-${n * 100}%)`;
-            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === n);
-            });
-        }
+<p class=MsoNormal>        body {</p>
 
-        // Currency
-        function changeCurrency() {
-            currentCurrency = document.getElementById('currencySelect').value;
-            renderBooks();
-            updateCart();
-        }
+<p class=MsoNormal>            font-family: -apple-system, BlinkMacSystemFont,
+'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;</p>
 
-        function formatPrice(price) {
-            const converted = price * exchangeRates[currentCurrency];
-            const symbols = { FCFA: ' FCFA', USD: ', EUR: '€', GBP: '£', CAD: 'CAD, NGN: '₦' };
-            return currentCurrency === 'FCFA' || currentCurrency === 'NGN' 
-                ? Math.round(converted) + symbols[currentCurrency]
-                : symbols[currentCurrency] + converted.toFixed(2);
-        }
+<p class=MsoNormal>            line-height: 1.6;</p>
 
-        // Render functions
-        function renderBooks() {
-            const grid = document.getElementById('booksGrid');
-            const genre = document.getElementById('genreFilter').value;
-            const search = document.getElementById('searchBooks').value.toLowerCase();
-            
-            const filtered = books.filter(book => {
-                const matchGenre = !genre || book.genre === genre;
-                const matchSearch = !search || book.title.toLowerCase().includes(search) || book.author.toLowerCase().includes(search);
-                return matchGenre && matchSearch;
-            });
+<p class=MsoNormal>            color: var(--primary-black);</p>
 
-            grid.innerHTML = filtered.map(book => `
-                <div class="book-card">
-                    <div class="book-image">📖 ${book.title}</div>
-                    <div class="book-info">
-                        <h3>${book.title}</h3>
-                        <p><strong>Auteur:</strong> ${book.author}</p>
-                        <p><strong>Genre:</strong> ${book.genre}</p>
-                        <p><strong>Année:</strong> ${book.year}</p>
-                        <div class="book-price">${formatPrice(book.price)}</div>
-                        ${book.format.includes('pdf') ? '<p>📥 Format PDF disponible</p>' : ''}
-                        <button class="btn btn-primary" onclick="addToCart(${book.id})" style="width: 100%;">Ajouter au panier</button>
-                    </div>
-                </div>
-            `).join('');
-        }
+<p class=MsoNormal>            background: var(--white);</p>
 
-        function renderAuthors() {
-            const grid = document.getElementById('authorsGrid');
-            grid.innerHTML = authors.map(author => `
-                <div class="author-card">
-                    <div class="author-image">👤</div>
-                    <h3>${author.name}</h3>
-                    <p>${author.bio}</p>
-                    <p><strong>Ouvrages:</strong> ${author.books.join(', ')}</p>
-                </div>
-            `).join('');
-        }
+<p class=MsoNormal>        }</p>
 
-        function renderBlog() {
-            const grid = document.getElementById('blogGrid');
-            grid.innerHTML = blogPosts.map(post => `
-                <div class="blog-card">
-                    <div class="blog-image">📰 ${post.title}</div>
-                    <div class="blog-content">
-                        <h3>${post.title}</h3>
-                        <p><strong>${post.date}</strong></p>
-                        <p>${post.excerpt}</p>
-                        <button class="btn btn-primary">Lire la suite</button>
-                    </div>
-                </div>
-            `).join('');
-        }
+<p class=MsoNormal>&nbsp;</p>
 
-        function renderEvents() {
-            const grid = document.getElementById('eventsGrid');
-            grid.innerHTML = events.map(event => `
-                <div class="event-card">
-                    <div class="event-image">📅 ${event.title}</div>
-                    <div class="event-info">
-                        <h3>${event.title}</h3>
-                        <p><strong>Date:</strong> ${event.date}</p>
-                        <p><strong>Lieu:</strong> ${event.location}</p>
-                        <button class="btn btn-primary">S'inscrire</button>
-                    </div>
-                </div>
-            `).join('');
-        }
+<p class=MsoNormal>        /* Navigation */</p>
 
-        function renderFormations() {
-            const grid = document.getElementById('formationsGrid');
-            grid.innerHTML = formations.map(formation => `
-                <div class="formation-card">
-                    <h3>${formation.title}</h3>
-                    <p>${formation.description}</p>
-                    <p><strong>Durée:</strong> ${formation.duration}</p>
-                    <p><strong>Prix:</strong> ${formatPrice(formation.price)}</p>
-                    <button class="btn btn-primary">S'inscrire</button>
-                </div>
-            `).join('');
-        }
+<p class=MsoNormal>        nav {</p>
 
-        function filterBooks() {
-            renderBooks();
-        }
+<p class=MsoNormal>            position: fixed;</p>
 
-        // Cart functions
-        function addToCart(bookId) {
-            const book = books.find(b => b.id === bookId);
-            const existing = cart.find(item => item.id === bookId);
-            
-            if (existing) {
-                existing.quantity++;
-            } else {
-                cart.push({ ...book, quantity: 1 });
-            }
-            
-            saveCart();
-            updateCart();
-            alert(`"${book.title}" ajouté au panier!`);
-        }
+<p class=MsoNormal>            top: 0;</p>
 
-        function removeFromCart(bookId) {
-            cart = cart.filter(item => item.id !== bookId);
-            saveCart();
-            updateCart();
-        }
+<p class=MsoNormal>            width: 100%;</p>
 
-        function updateQuantity(bookId, delta) {
-            const item = cart.find(i => i.id === bookId);
-            if (item) {
-                item.quantity += delta;
-                if (item.quantity <= 0) {
-                    removeFromCart(bookId);
-                } else {
-                    saveCart();
-                    updateCart();
-                }
-            }
-        }
+<p class=MsoNormal>            background: var(--white);</p>
 
-        function updateCart() {
-            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-            document.getElementById('cartCount').textContent = count;
-            
-            const itemsDiv = document.getElementById('cartItems');
-            if (cart.length === 0) {
-                itemsDiv.innerHTML = '<p>Votre panier est vide</p>';
-            } else {
-                itemsDiv.innerHTML = cart.map(item => `
-                    <div class="cart-item">
-                        <div>
-                            <strong>${item.title}</strong><br>
-                            ${formatPrice(item.price)} × ${item.quantity}
-                        </div>
-                        <div>
-                            <button onclick="updateQuantity(${item.id}, -1)">-</button>
-                            <button onclick="updateQuantity(${item.id}, 1)">+</button>
-                            <button onclick="removeFromCart(${item.id})">🗑️</button>
-                        </div>
-                    </div>
-                `).join('');
-            }
-            
-            updateShipping();
-        }
+<p class=MsoNormal>            box-shadow: 0 2px 10px rgba(0,0,0,0.1);</p>
 
-        function updateShipping() {
-            const subtotal = cart.reduce((sum, item) => item.price * item.quantity + sum, 0);
-            const country = document.getElementById('shippingCountry').value;
-            const bookCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-            
-            let shipping = 0;
-            if (country === 'international') {
-                shipping = bookCount >= 10 ? 0 : 5000;
-            }
-            
-            const total = subtotal + shipping;
-            
-            document.getElementById('cartSubtotal').textContent = formatPrice(subtotal);
-            document.getElementById('shippingFee').textContent = shipping === 0 ? 'Gratuit' : formatPrice(shipping);
-            document.getElementById('cartTotal').textContent = formatPrice(total);
-        }
+<p class=MsoNormal>            z-index: 1000;</p>
 
-        function toggleCart() {
-            const modal = document.getElementById('cartModal');
-            modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-        }
+<p class=MsoNormal>            padding: 1rem 0;</p>
 
-        function saveCart() {
-            try {
-                const cartData = JSON.stringify(cart);
-                document.cookie = `cart=${cartData}; path=/; max-age=604800`;
-            } catch (e) {
-                console.log('Cart saved in session');
-            }
-        }
+<p class=MsoNormal>        }</p>
 
-        function loadCart() {
-            try {
-                const cookies = document.cookie.split(';');
-                const cartCookie = cookies.find(c => c.trim().startsWith('cart='));
-                if (cartCookie) {
-                    cart = JSON.parse(cartCookie.split('=')[1]);
-                    updateCart();
-                }
-            } catch (e) {
-                cart = [];
-            }
-        }
+<p class=MsoNormal>&nbsp;</p>
 
-        function processPayment() {
-            if (cart.length === 0) {
-                alert('Votre panier est vide!');
-                return;
-            }
-            
-            const method = document.getElementById('paymentMethod').value;
-            const total = cart.reduce((sum, item) => item.price * item.quantity + sum, 0);
-            const country = document.getElementById('shippingCountry').value;
-            
-            let methodName = method === 'orange' ? 'Orange Money' : method === 'moov' ? 'Moov Money' : 'PayPal';
-            
-            alert(`Paiement de ${formatPrice(total)} via ${methodName}\n\nCommande confirmée! Vous recevrez un email de confirmation avec les détails de livraison.`);
-            
-            // Generate invoice
-            generateInvoice();
-            
-            // Clear cart
-            cart = [];
-            saveCart();
-            updateCart();
-            toggleCart();
-        }
+<p class=MsoNormal>        .nav-container {</p>
 
-        function generateInvoice() {
-            const invoiceContent = `
-FACTURE - Les Editions la Reforme
-================================
-Date: ${new Date().toLocaleDateString('fr-FR')}
+<p class=MsoNormal>            max-width: 1200px;</p>
 
-Articles:
-${cart.map(item => `- ${item.title} × ${item.quantity}: ${formatPrice(item.price * item.quantity)}`).join('\n')}
+<p class=MsoNormal>            margin: 0 auto;</p>
 
-Total: ${formatPrice(cart.reduce((sum, item) => item.price * item.quantity + sum, 0))}
+<p class=MsoNormal>            padding: 0 2rem;</p>
 
-Merci de votre commande!
-            `;
-            
-            console.log('Facture générée:', invoiceContent);
-            alert('Facture générée! (Consultez la console pour les détails)');
-        }
+<p class=MsoNormal>            display: flex;</p>
 
-        // Forms
-        document.getElementById('manuscriptForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Merci pour votre soumission! Nous examinerons votre manuscrit et vous contacterons sous 30 jours par email et WhatsApp.');
-            e.target.reset();
-        });
+<p class=MsoNormal>            justify-content: space-between;</p>
 
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Message envoyé! Nous vous répondrons dans les plus brefs délais.');
-            e.target.reset();
-        });
+<p class=MsoNormal>            align-items: center;</p>
 
-        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Inscription réussie! Vous recevrez nos prochaines newsletters.');
-            e.target.reset();
-        });
+<p class=MsoNormal>        }</p>
 
-        // Mobile menu
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
+<p class=MsoNormal>&nbsp;</p>
 
-        // WhatsApp
-        function openWhatsApp() {
-            window.open('https://wa.me/22671671801', '_blank');
-        }
+<p class=MsoNormal>        .logo {</p>
 
-        // Close cart when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('cartModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
+<p class=MsoNormal>            font-size: 1.5rem;</p>
 
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', init);
-    </script>
+<p class=MsoNormal>            font-weight: bold;</p>
+
+<p class=MsoNormal>            color: var(--primary-blue);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .nav-links {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>            list-style: none;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .nav-links a {</p>
+
+<p class=MsoNormal>            text-decoration: none;</p>
+
+<p class=MsoNormal>            color: var(--primary-black);</p>
+
+<p class=MsoNormal>            font-weight: 500;</p>
+
+<p class=MsoNormal>            transition: color 0.3s;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .nav-links a:hover {</p>
+
+<p class=MsoNormal>            color: var(--primary-blue);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .mobile-menu {</p>
+
+<p class=MsoNormal>            display: none;</p>
+
+<p class=MsoNormal>            font-size: 1.5rem;</p>
+
+<p class=MsoNormal>            cursor: pointer;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* WhatsApp Button */</p>
+
+<p class=MsoNormal>        .whatsapp-float {</p>
+
+<p class=MsoNormal>            position: fixed;</p>
+
+<p class=MsoNormal>            bottom: 20px;</p>
+
+<p class=MsoNormal>            right: 20px;</p>
+
+<p class=MsoNormal>            background: #25D366;</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            width: 60px;</p>
+
+<p class=MsoNormal>            height: 60px;</p>
+
+<p class=MsoNormal>            border-radius: 50%;</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            font-size: 2rem;</p>
+
+<p class=MsoNormal>            cursor: pointer;</p>
+
+<p class=MsoNormal>            box-shadow: 0 4px 12px rgba(0,0,0,0.3);</p>
+
+<p class=MsoNormal>            z-index: 1001;</p>
+
+<p class=MsoNormal>            transition: transform 0.3s;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .whatsapp-float:hover {</p>
+
+<p class=MsoNormal>            transform: scale(1.1);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Hero Section */</p>
+
+<p class=MsoNormal>        .hero {</p>
+
+<p class=MsoNormal>            margin-top: 80px;</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, var(--primary-blue)
+0%, var(--primary-black) 100%);</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            padding: 4rem 2rem;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>            min-height: 70vh;</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            flex-direction: column;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .hero h1 {</p>
+
+<p class=MsoNormal>            font-size: 3rem;</p>
+
+<p class=MsoNormal>            margin-bottom: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .hero p {</p>
+
+<p class=MsoNormal>            font-size: 1.2rem;</p>
+
+<p class=MsoNormal>            margin-bottom: 2rem;</p>
+
+<p class=MsoNormal>            max-width: 800px;</p>
+
+<p class=MsoNormal>            margin-left: auto;</p>
+
+<p class=MsoNormal>            margin-right: auto;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .hero-buttons {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            gap: 1rem;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            flex-wrap: wrap;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .btn {</p>
+
+<p class=MsoNormal>            padding: 1rem 2rem;</p>
+
+<p class=MsoNormal>            border: none;</p>
+
+<p class=MsoNormal>            border-radius: 5px;</p>
+
+<p class=MsoNormal>            font-size: 1rem;</p>
+
+<p class=MsoNormal>            cursor: pointer;</p>
+
+<p class=MsoNormal>            transition: all 0.3s;</p>
+
+<p class=MsoNormal>            text-decoration: none;</p>
+
+<p class=MsoNormal>            display: inline-block;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .btn-primary {</p>
+
+<p class=MsoNormal>            background: var(--primary-blue);</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .btn-secondary {</p>
+
+<p class=MsoNormal>            background: white;</p>
+
+<p class=MsoNormal>            color: var(--primary-black);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .btn:hover {</p>
+
+<p class=MsoNormal>            transform: translateY(-2px);</p>
+
+<p class=MsoNormal>            box-shadow: 0 4px 12px rgba(0,0,0,0.2);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Carousel */</p>
+
+<p class=MsoNormal>        .carousel {</p>
+
+<p class=MsoNormal>            max-width: 1200px;</p>
+
+<p class=MsoNormal>            margin: 3rem auto;</p>
+
+<p class=MsoNormal>            padding: 0 2rem;</p>
+
+<p class=MsoNormal>            position: relative;</p>
+
+<p class=MsoNormal>            overflow: hidden;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .carousel-inner {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            transition: transform 0.5s ease;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .carousel-item {</p>
+
+<p class=MsoNormal>            min-width: 100%;</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            padding: 3rem;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .carousel-placeholder {</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>            height: 300px;</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #667eea 0%,
+#764ba2 100%);</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            font-size: 1.5rem;</p>
+
+<p class=MsoNormal>            margin-bottom: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .carousel-controls {</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>            margin-top: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .carousel-dot {</p>
+
+<p class=MsoNormal>            width: 12px;</p>
+
+<p class=MsoNormal>            height: 12px;</p>
+
+<p class=MsoNormal>            border-radius: 50%;</p>
+
+<p class=MsoNormal>            background: var(--border-gray);</p>
+
+<p class=MsoNormal>            display: inline-block;</p>
+
+<p class=MsoNormal>            margin: 0 5px;</p>
+
+<p class=MsoNormal>            cursor: pointer;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .carousel-dot.active {</p>
+
+<p class=MsoNormal>            background: var(--primary-blue);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Container */</p>
+
+<p class=MsoNormal>        .container {</p>
+
+<p class=MsoNormal>            max-width: 1200px;</p>
+
+<p class=MsoNormal>            margin: 0 auto;</p>
+
+<p class=MsoNormal>            padding: 4rem 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        section {</p>
+
+<p class=MsoNormal>            margin-bottom: 4rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        h2 {</p>
+
+<p class=MsoNormal>            font-size: 2.5rem;</p>
+
+<p class=MsoNormal>            margin-bottom: 2rem;</p>
+
+<p class=MsoNormal>            color: var(--primary-black);</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&lt;style&gt;</p>
+
+<p class=MsoNormal>/* ==== CATALOGUE ==== */</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.catalogue-section {</p>
+
+<p class=MsoNormal>&nbsp; width: 100%;</p>
+
+<p class=MsoNormal>&nbsp; padding: 30px;</p>
+
+<p class=MsoNormal>&nbsp; box-sizing: border-box;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Onglets */</p>
+
+<p class=MsoNormal>.tabs {</p>
+
+<p class=MsoNormal>&nbsp; display: flex;</p>
+
+<p class=MsoNormal>&nbsp; gap: 40px;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.tab {</p>
+
+<p class=MsoNormal>&nbsp; background: none;</p>
+
+<p class=MsoNormal>&nbsp; border: none;</p>
+
+<p class=MsoNormal>&nbsp; font-size: 22px;</p>
+
+<p class=MsoNormal>&nbsp; cursor: pointer;</p>
+
+<p class=MsoNormal>&nbsp; color: #000;</p>
+
+<p class=MsoNormal>&nbsp; position: relative;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.tab.active {</p>
+
+<p class=MsoNormal>&nbsp; color: #cf6433;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.tab.active::after {</p>
+
+<p class=MsoNormal>&nbsp; content: &quot;&quot;;</p>
+
+<p class=MsoNormal>&nbsp; display: block;</p>
+
+<p class=MsoNormal>&nbsp; height: 4px;</p>
+
+<p class=MsoNormal>&nbsp; width: 100%;</p>
+
+<p class=MsoNormal>&nbsp; background: #cf6433;</p>
+
+<p class=MsoNormal>&nbsp; border-radius: 10px;</p>
+
+<p class=MsoNormal>&nbsp; margin-top: 6px;</p>
+
+<p class=MsoNormal>&nbsp; box-shadow: 0 4px 8px rgba(207,100,51,0.5);</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Contenu */</p>
+
+<p class=MsoNormal>.tab-content {</p>
+
+<p class=MsoNormal>&nbsp; display: none;</p>
+
+<p class=MsoNormal>&nbsp; margin-top: 20px;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.tab-content.active {</p>
+
+<p class=MsoNormal>&nbsp; display: block;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.books {</p>
+
+<p class=MsoNormal>&nbsp; display: flex;</p>
+
+<p class=MsoNormal>&nbsp; gap: 20px;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.book-card {</p>
+
+<p class=MsoNormal>&nbsp; position: relative;</p>
+
+<p class=MsoNormal>&nbsp; padding: 30px;</p>
+
+<p class=MsoNormal>&nbsp; border: 2px solid #cf6433;</p>
+
+<p class=MsoNormal>&nbsp; border-radius: 14px;</p>
+
+<p class=MsoNormal>&nbsp; box-shadow: 0 8px 16px rgba(0,0,0,0.1);</p>
+
+<p class=MsoNormal>&nbsp; flex: 1;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Badge ventes */</p>
+
+<p class=MsoNormal>.badge {</p>
+
+<p class=MsoNormal>&nbsp; position: absolute;</p>
+
+<p class=MsoNormal>&nbsp; top: 10px;</p>
+
+<p class=MsoNormal>&nbsp; right: 10px;</p>
+
+<p class=MsoNormal>&nbsp; background: #cf6433;</p>
+
+<p class=MsoNormal>&nbsp; color: #fff;</p>
+
+<p class=MsoNormal>&nbsp; padding: 6px 10px;</p>
+
+<p class=MsoNormal>&nbsp; border-radius: 50%;</p>
+
+<p class=MsoNormal>&nbsp; font-size: 12px;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Nouveautés */</p>
+
+<p class=MsoNormal>.nouveautes-title {</p>
+
+<p class=MsoNormal>&nbsp; margin: 50px 0 20px;</p>
+
+<p class=MsoNormal>&nbsp; font-size: 32px;</p>
+
+<p class=MsoNormal>&nbsp; color: #cf6433;</p>
+
+<p class=MsoNormal>&nbsp; text-align: center;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.nouveautes-carousel {</p>
+
+<p class=MsoNormal>&nbsp; display: flex;</p>
+
+<p class=MsoNormal>&nbsp; gap: 20px;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.carousel-item {</p>
+
+<p class=MsoNormal>&nbsp; border: 2px solid #cf6433;</p>
+
+<p class=MsoNormal>&nbsp; border-radius: 16px;</p>
+
+<p class=MsoNormal>&nbsp; padding: 25px;</p>
+
+<p class=MsoNormal>&nbsp; flex: 1;</p>
+
+<p class=MsoNormal>&nbsp; box-shadow: 0 8px 16px rgba(0,0,0,0.1);</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>.carousel-item button {</p>
+
+<p class=MsoNormal>&nbsp; margin-top: 15px;</p>
+
+<p class=MsoNormal>&nbsp; padding: 10px 16px;</p>
+
+<p class=MsoNormal>&nbsp; border: none;</p>
+
+<p class=MsoNormal>&nbsp; background: #cf6433;</p>
+
+<p class=MsoNormal>&nbsp; color: #fff;</p>
+
+<p class=MsoNormal>&nbsp; border-radius: 8px;</p>
+
+<p class=MsoNormal>&nbsp; cursor: pointer;</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Mobile */</p>
+
+<p class=MsoNormal>@media (max-width: 768px) {</p>
+
+<p class=MsoNormal>&nbsp; .nouveautes-carousel {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; animation: scrollAuto 18s linear infinite;</p>
+
+<p class=MsoNormal>&nbsp; }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp; @keyframes scrollAuto {</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 0% { transform: translateX(0); }</p>
+
+<p class=MsoNormal>&nbsp; &nbsp; 100% { transform: translateX(-100%); }</p>
+
+<p class=MsoNormal>&nbsp; }</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&lt;/style&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Mission &amp; Vision */</p>
+
+<p class=MsoNormal>        .mission-vision {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fit,
+minmax(300px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>            margin-top: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .card {</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Catalog */</p>
+
+<p class=MsoNormal>        .catalog-filters {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            gap: 1rem;</p>
+
+<p class=MsoNormal>            margin-bottom: 2rem;</p>
+
+<p class=MsoNormal>            flex-wrap: wrap;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .catalog-filters select,</p>
+
+<p class=MsoNormal>        .catalog-filters input {</p>
+
+<p class=MsoNormal>            padding: 0.5rem 1rem;</p>
+
+<p class=MsoNormal>            border: 1px solid var(--border-gray);</p>
+
+<p class=MsoNormal>            border-radius: 5px;</p>
+
+<p class=MsoNormal>            font-size: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .books-grid {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fill,
+minmax(250px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .book-card {</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            overflow: hidden;</p>
+
+<p class=MsoNormal>            transition: transform 0.3s;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .book-card:hover {</p>
+
+<p class=MsoNormal>            transform: translateY(-5px);</p>
+
+<p class=MsoNormal>            box-shadow: 0 8px 16px rgba(0,0,0,0.1);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .book-image {</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>            height: 300px;</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #667eea 0%,
+#764ba2 100%);</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            font-size: 1.2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .book-info {</p>
+
+<p class=MsoNormal>            padding: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .book-info h3 {</p>
+
+<p class=MsoNormal>            margin-bottom: 0.5rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .book-price {</p>
+
+<p class=MsoNormal>            font-size: 1.5rem;</p>
+
+<p class=MsoNormal>            color: var(--primary-blue);</p>
+
+<p class=MsoNormal>            font-weight: bold;</p>
+
+<p class=MsoNormal>            margin: 1rem 0;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Forms */</p>
+
+<p class=MsoNormal>        .form-group {</p>
+
+<p class=MsoNormal>            margin-bottom: 1.5rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .form-group label {</p>
+
+<p class=MsoNormal>            display: block;</p>
+
+<p class=MsoNormal>            margin-bottom: 0.5rem;</p>
+
+<p class=MsoNormal>            font-weight: 500;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .form-group input,</p>
+
+<p class=MsoNormal>        .form-group textarea,</p>
+
+<p class=MsoNormal>        .form-group select {</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>            padding: 0.75rem;</p>
+
+<p class=MsoNormal>            border: 1px solid var(--border-gray);</p>
+
+<p class=MsoNormal>            border-radius: 5px;</p>
+
+<p class=MsoNormal>            font-size: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .form-group textarea {</p>
+
+<p class=MsoNormal>            min-height: 120px;</p>
+
+<p class=MsoNormal>            resize: vertical;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Cart */</p>
+
+<p class=MsoNormal>        .cart-icon {</p>
+
+<p class=MsoNormal>            position: relative;</p>
+
+<p class=MsoNormal>            cursor: pointer;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .cart-count {</p>
+
+<p class=MsoNormal>            position: absolute;</p>
+
+<p class=MsoNormal>            top: -8px;</p>
+
+<p class=MsoNormal>            right: -8px;</p>
+
+<p class=MsoNormal>            background: red;</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            border-radius: 50%;</p>
+
+<p class=MsoNormal>            width: 20px;</p>
+
+<p class=MsoNormal>            height: 20px;</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            font-size: 0.8rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .cart-modal {</p>
+
+<p class=MsoNormal>            display: none;</p>
+
+<p class=MsoNormal>            position: fixed;</p>
+
+<p class=MsoNormal>            top: 0;</p>
+
+<p class=MsoNormal>            left: 0;</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>            height: 100%;</p>
+
+<p class=MsoNormal>            background: rgba(0,0,0,0.5);</p>
+
+<p class=MsoNormal>            z-index: 2000;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .cart-content {</p>
+
+<p class=MsoNormal>            position: absolute;</p>
+
+<p class=MsoNormal>            top: 50%;</p>
+
+<p class=MsoNormal>            left: 50%;</p>
+
+<p class=MsoNormal>            transform: translate(-50%, -50%);</p>
+
+<p class=MsoNormal>            background: white;</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            max-width: 600px;</p>
+
+<p class=MsoNormal>            width: 90%;</p>
+
+<p class=MsoNormal>            max-height: 80vh;</p>
+
+<p class=MsoNormal>            overflow-y: auto;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .cart-item {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            justify-content: space-between;</p>
+
+<p class=MsoNormal>            padding: 1rem 0;</p>
+
+<p class=MsoNormal>            border-bottom: 1px solid var(--border-gray);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Authors Grid */</p>
+
+<p class=MsoNormal>        .authors-grid {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fill,
+minmax(280px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .author-card {</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .author-image {</p>
+
+<p class=MsoNormal>            width: 150px;</p>
+
+<p class=MsoNormal>            height: 150px;</p>
+
+<p class=MsoNormal>            border-radius: 50%;</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #667eea 0%,
+#764ba2 100%);</p>
+
+<p class=MsoNormal>            margin: 0 auto 1rem;</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            font-size: 3rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Events Calendar */</p>
+
+<p class=MsoNormal>        .events-grid {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fill,
+minmax(300px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .event-card {</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            overflow: hidden;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .event-image {</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>            height: 200px;</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #f093fb 0%,
+#f5576c 100%);</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            font-size: 1.2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .event-info {</p>
+
+<p class=MsoNormal>            padding: 1.5rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Blog */</p>
+
+<p class=MsoNormal>        .blog-grid {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fill,
+minmax(350px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .blog-card {</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            overflow: hidden;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .blog-image {</p>
+
+<p class=MsoNormal>            width: 100%;</p>
+
+<p class=MsoNormal>            height: 250px;</p>
+
+<p class=MsoNormal>            background: linear-gradient(135deg, #4facfe 0%,
+#00f2fe 100%);</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            align-items: center;</p>
+
+<p class=MsoNormal>            justify-content: center;</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            font-size: 1.2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .blog-content {</p>
+
+<p class=MsoNormal>            padding: 1.5rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Newsletter */</p>
+
+<p class=MsoNormal>        .newsletter {</p>
+
+<p class=MsoNormal>            background: var(--primary-blue);</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .newsletter h3 {</p>
+
+<p class=MsoNormal>            margin-bottom: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .newsletter-form {</p>
+
+<p class=MsoNormal>            display: flex;</p>
+
+<p class=MsoNormal>            gap: 1rem;</p>
+
+<p class=MsoNormal>            max-width: 500px;</p>
+
+<p class=MsoNormal>            margin: 0 auto;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .newsletter-form input {</p>
+
+<p class=MsoNormal>            flex: 1;</p>
+
+<p class=MsoNormal>            padding: 0.75rem;</p>
+
+<p class=MsoNormal>            border: none;</p>
+
+<p class=MsoNormal>            border-radius: 5px;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Footer */</p>
+
+<p class=MsoNormal>        footer {</p>
+
+<p class=MsoNormal>            background: var(--primary-black);</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            padding: 3rem 2rem 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .footer-content {</p>
+
+<p class=MsoNormal>            max-width: 1200px;</p>
+
+<p class=MsoNormal>            margin: 0 auto;</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fit,
+minmax(250px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>            margin-bottom: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .footer-section h3 {</p>
+
+<p class=MsoNormal>            margin-bottom: 1rem;</p>
+
+<p class=MsoNormal>            color: var(--primary-blue);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .footer-section a {</p>
+
+<p class=MsoNormal>            color: white;</p>
+
+<p class=MsoNormal>            text-decoration: none;</p>
+
+<p class=MsoNormal>            display: block;</p>
+
+<p class=MsoNormal>            margin-bottom: 0.5rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .footer-section a:hover {</p>
+
+<p class=MsoNormal>            color: var(--primary-blue);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .footer-bottom {</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>            padding-top: 2rem;</p>
+
+<p class=MsoNormal>            border-top: 1px solid rgba(255,255,255,0.1);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Responsive */</p>
+
+<p class=MsoNormal>        @media (max-width: 768px) {</p>
+
+<p class=MsoNormal>            .nav-links {</p>
+
+<p class=MsoNormal>                display: none;</p>
+
+<p class=MsoNormal>                flex-direction: column;</p>
+
+<p class=MsoNormal>                position: absolute;</p>
+
+<p class=MsoNormal>                top: 100%;</p>
+
+<p class=MsoNormal>                left: 0;</p>
+
+<p class=MsoNormal>                width: 100%;</p>
+
+<p class=MsoNormal>                background: white;</p>
+
+<p class=MsoNormal>                padding: 1rem;</p>
+
+<p class=MsoNormal>                box-shadow: 0 4px 8px rgba(0,0,0,0.1);</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            .nav-links.active {</p>
+
+<p class=MsoNormal>                display: flex;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            .mobile-menu {</p>
+
+<p class=MsoNormal>                display: block;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            .hero h1 {</p>
+
+<p class=MsoNormal>                font-size: 2rem;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            .hero-buttons {</p>
+
+<p class=MsoNormal>                flex-direction: column;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            .newsletter-form {</p>
+
+<p class=MsoNormal>                flex-direction: column;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Dashboard */</p>
+
+<p class=MsoNormal>        .dashboard {</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            margin-bottom: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .stats-grid {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fit,
+minmax(200px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 1rem;</p>
+
+<p class=MsoNormal>            margin-top: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .stat-card {</p>
+
+<p class=MsoNormal>            background: white;</p>
+
+<p class=MsoNormal>            padding: 1.5rem;</p>
+
+<p class=MsoNormal>            border-radius: 8px;</p>
+
+<p class=MsoNormal>            text-align: center;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .stat-number {</p>
+
+<p class=MsoNormal>            font-size: 2rem;</p>
+
+<p class=MsoNormal>            font-weight: bold;</p>
+
+<p class=MsoNormal>            color: var(--primary-blue);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .hidden {</p>
+
+<p class=MsoNormal>            display: none;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Currency Selector */</p>
+
+<p class=MsoNormal>        .currency-selector {</p>
+
+<p class=MsoNormal>            display: inline-block;</p>
+
+<p class=MsoNormal>            margin-left: 1rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        /* Formations */</p>
+
+<p class=MsoNormal>        .formations-grid {</p>
+
+<p class=MsoNormal>            display: grid;</p>
+
+<p class=MsoNormal>            grid-template-columns: repeat(auto-fill,
+minmax(300px, 1fr));</p>
+
+<p class=MsoNormal>            gap: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        .formation-card {</p>
+
+<p class=MsoNormal>            background: var(--light-gray);</p>
+
+<p class=MsoNormal>            border-radius: 10px;</p>
+
+<p class=MsoNormal>            padding: 2rem;</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>    &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;style&gt; .btn-primary { background-color: red
+!important; border-color: red !important; } &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Navigation --&gt;</p>
+
+<p class=MsoNormal>    &lt;nav&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;nav-container&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;logo&quot;&gt;Les Editions
+la Reforme&lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;ul class=&quot;nav-links&quot;
+id=&quot;navLinks&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;li&gt;&lt;a
+href=&quot;#accueil&quot;&gt;Accueil&lt;/a&gt;&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;li&gt;&lt;a
+href=&quot;#catalogue&quot;&gt;Catalogue&lt;/a&gt;&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;li&gt;&lt;a href=&quot;#auteurs&quot;&gt;Auteurs&lt;/a&gt;&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;li&gt;&lt;a
+href=&quot;#actualites&quot;&gt;Actualités&lt;/a&gt;&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;li&gt;&lt;a
+href=&quot;#formations&quot;&gt;Formations&lt;/a&gt;&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;li&gt;&lt;a
+href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;li class=&quot;cart-icon&quot;
+onclick=&quot;toggleCart()&quot;&gt;</p>
+
+<p class=MsoNormal>                    <span style='font-family:"Segoe UI Symbol",sans-serif'>&#128722;</span>
+&lt;span class=&quot;cart-count&quot;
+id=&quot;cartCount&quot;&gt;0&lt;/span&gt;</p>
+
+<p class=MsoNormal>                &lt;/li&gt;</p>
+
+<p class=MsoNormal>                &lt;li
+class=&quot;currency-selector&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;select id=&quot;currencySelect&quot;
+onchange=&quot;changeCurrency()&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;FCFA&quot;&gt;FCFA&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;USD&quot;&gt;USD&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;EUR&quot;&gt;EUR&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;GBP&quot;&gt;GBP&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;CAD&quot;&gt;CAD&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;NGN&quot;&gt;NGN&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;/select&gt;</p>
+
+<p class=MsoNormal>                &lt;/li&gt;</p>
+
+<p class=MsoNormal>            &lt;/ul&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;mobile-menu&quot;
+onclick=&quot;toggleMenu()&quot;&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#9776;</span>&lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/nav&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;a</p>
+
+<p class=MsoNormal>    href=&quot;https://wa.me/22671671801?text=Bonjour%2C%20Les%20Editions%20la%20Réforme.%20Je%20Veux%20Plus
+%20d’Informations.&quot;</p>
+
+<p class=MsoNormal>    Class=&quot;whatsapp-float&quot;</p>
+
+<p class=MsoNormal>    Target=&quot;_blank&quot;&gt;</p>
+
+<p class=MsoNormal><span style='font-family:"Segoe UI Emoji",sans-serif'>&#128172;</span></p>
+
+<p class=MsoNormal>&lt;/a&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- Hero Section --&gt;</p>
+
+<p class=MsoNormal>    &lt;section class=&quot;hero&quot;
+id=&quot;accueil&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;h1&gt;Découvrez de Nouvelles Lectures&lt;/h1&gt;</p>
+
+<p class=MsoNormal>        &lt;p&gt;Révolutionnons le Monde de la
+Littérature&lt;/p&gt;</p>
+
+<p class=MsoNormal>        &lt;p&gt;Lisez notre Catalogue d'Ouvrages,
+Rencontrez vos Auteurs Préférez et Suivez l’Actualité Littéraire.&lt;/p&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;hero-buttons&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;a href=&quot;#catalogue&quot;
+class=&quot;btn btn-primary&quot;&gt;Découvrir le catalogue&lt;/a&gt;</p>
+
+<p class=MsoNormal>            &lt;a href=&quot;#manuscrit&quot;
+class=&quot;btn btn-secondary&quot;&gt;Soumettre un manuscrit&lt;/a&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;section class=&quot;catalogue-section&quot;&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;div class=&quot;tabs&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;button class=&quot;tab active&quot;
+data-tab=&quot;heart&quot;&gt;Coups de cœur&lt;/button&gt;</p>
+
+<p class=MsoNormal>    &lt;button class=&quot;tab&quot;
+data-tab=&quot;best&quot;&gt;Meilleures ventes&lt;/button&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;div class=&quot;tab-content active&quot;
+id=&quot;heart&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;books&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;div class=&quot;book-card&quot;&gt;Ouvrage Coup de
+cœur 1&lt;/div&gt;</p>
+
+<p class=MsoNormal>      &lt;div class=&quot;book-card&quot;&gt;Ouvrage Coup de
+cœur 2&lt;/div&gt;</p>
+
+<p class=MsoNormal>      &lt;div class=&quot;book-card&quot;&gt;Ouvrage Coup de
+cœur 3&lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;div class=&quot;tab-content&quot;
+id=&quot;best&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;books&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;div class=&quot;book-card&quot;&gt;Best-seller
+&lt;span class=&quot;badge&quot;&gt;12&lt;/span&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>      &lt;div class=&quot;book-card&quot;&gt;Best-seller
+&lt;span class=&quot;badge&quot;&gt;25&lt;/span&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>      &lt;div class=&quot;book-card&quot;&gt;Best-seller
+&lt;span class=&quot;badge&quot;&gt;40&lt;/span&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;h2
+class=&quot;nouveautes-title&quot;&gt;Nouveautés&lt;/h2&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;div class=&quot;nouveautes-carousel&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;carousel-item&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;h3&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128218;</span>
+Collection Précieux 2026&lt;/h3&gt;</p>
+
+<p class=MsoNormal>      &lt;p&gt;Grandes parutions &amp; nouveautés
+éditoriales&lt;/p&gt;</p>
+
+<p class=MsoNormal>      &lt;button&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128214;</span>
+Voir +&lt;/button&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;carousel-item&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;h3&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#127881;</span>
+-10% sur tous les romans&lt;/h3&gt;</p>
+
+<p class=MsoNormal>      &lt;p&gt;Offre promotionnelle limitée&lt;/p&gt;</p>
+
+<p class=MsoNormal>      &lt;button&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128722;</span>
+Acheter&lt;/button&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;carousel-item&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;h3&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#9997;</span>&#65039;
+Atelier d’écriture créative&lt;/h3&gt;</p>
+
+<p class=MsoNormal>      &lt;p&gt;Formez-vous avec nos experts&lt;/p&gt;</p>
+
+<p class=MsoNormal>      &lt;button&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128221;</span>
+S’inscrire&lt;/button&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;/section&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Mission &amp; Vision --&gt;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;container&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;section&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;Notre Mission &amp; Vision&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;mission-vision&quot;&gt;</p>
+
+<p class=MsoNormal>            <span style='font-family:"Arial",sans-serif;
+color:#222222;background:white'>&lt;!-- Notre Histoire --&gt;</span></span></p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card&quot;&gt;</p>
+
+<p class=MsoNormal style='background:white'>         <span style='font-size:
+12.0pt;line-height:107%;font-family:"Arial",sans-serif;color:#222222'>&lt;h3&gt;Notre
+Histoire&lt;/h3&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+color:#222222'>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='color:#222222'>Créée le 15 Novembre 2024,
+Les Éditions La Réforme sont une maison d'édition née du désir de transformer
+durablement le paysage littéraire burkinabè. Fondée par un auteur engagé, elle
+répond aux frustrations de nombreux écrivains locaux face aux manquements de
+l'édition traditionnelle : lenteurs, manque de qualité, absence de
+transparence.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='color:#222222'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='color:#222222'>Notre parcours a été
+marqué par une croissance constante, fondée sur des relations solides avec nos
+auteurs, nos lecteurs et nos partenaires. Chaque livre publié est le fruit d'un
+travail collaboratif et d'un engagement envers l'excellence.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+color:#222222'>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><span style='font-size:12.0pt;font-family:"Arial",sans-serif;
+color:#222222'>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>                    &lt;h3&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#127919;</span>
+Notre Mission&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;Notre mission est claire :
+offrir une plateforme éthique et professionnelle où chaque auteur peut faire
+entendre sa voix et voir son œuvre publiée dans les meilleures conditions. Nous
+croyons que chaque livre mérite un accompagnement sérieux, un travail éditorial
+rigoureux et une mise en valeur digne.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#127757;</span>
+Notre Vision&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;À travers notre vision
+ambitieuse, nous voulons révéler le potentiel immense des talents littéraires
+burkinabè, tout en redéfinissant les normes de l'édition locale. Avec Les
+Éditions La Réforme, les défis deviennent des opportunités d’expression.&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Catalog --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;catalogue&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128214;</span>
+Notre Catalogue&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;catalog-filters&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;select id=&quot;genreFilter&quot;
+onchange=&quot;filterBooks()&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;option value=&quot;&quot;&gt;Tous
+les genres&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;option
+value=&quot;roman&quot;&gt;Roman&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;option
+value=&quot;essai&quot;&gt;Essai&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;option
+value=&quot;poesie&quot;&gt;Poésie&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;option
+value=&quot;jeunesse&quot;&gt;Jeunesse&lt;/option&gt;</p>
+
+<p class=MsoNormal>                &lt;/select&gt;</p>
+
+<p class=MsoNormal>                &lt;input type=&quot;text&quot; id=&quot;searchBooks&quot;
+placeholder=&quot;Rechercher un livre...&quot;
+oninput=&quot;filterBooks()&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;books-grid&quot;
+id=&quot;booksGrid&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Authors --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;auteurs&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#9997;</span>&#65039;
+Nos Auteurs&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;authors-grid&quot;
+id=&quot;authorsGrid&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Blog/News --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;actualites&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128240;</span>
+Actualités&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;blog-grid&quot;
+id=&quot;blogGrid&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Events Calendar --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;evenements&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128197;</span>
+Calendrier des Événements&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;events-grid&quot;
+id=&quot;eventsGrid&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Formations --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;formations&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#127891;</span>
+Nos Formations&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;p style=&quot;text-align: center;
+margin-bottom: 2rem;&quot;&gt;Rejoignez nos formations pour éveiller l'écrivain
+qui sommeille en vous. Pour plus d'informations, n'hésitez pas à nous contacter
+via nos réseaux sociaux ou par email!&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;formations-grid&quot;
+id=&quot;formationsGrid&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Manuscript Submission --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;manuscrit&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128221;</span>
+Soumettre un Manuscrit&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;card&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;p style=&quot;text-align: center;
+margin-bottom: 2rem;&quot;&gt;Soumission gratuite - Nous répondons sous 30
+jours&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;form id=&quot;manuscriptForm&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Nom complet
+*&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;text&quot;
+required&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Email *&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;email&quot;
+required&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;WhatsApp *
+(obligatoire)&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;tel&quot;
+required placeholder=&quot;+226 XX XX XX XX&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Titre du manuscrit
+*&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;text&quot;
+required&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Genre *&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;select required&gt;</p>
+
+<p class=MsoNormal>                            &lt;option
+value=&quot;&quot;&gt;Sélectionner&lt;/option&gt;</p>
+
+<p class=MsoNormal>                           
+&lt;option&gt;Roman&lt;/option&gt;</p>
+
+<p class=MsoNormal>                           
+&lt;option&gt;Essai&lt;/option&gt;</p>
+
+<p class=MsoNormal>                            &lt;option&gt;Poésie&lt;/option&gt;</p>
+
+<p class=MsoNormal>                           
+&lt;option&gt;Jeunesse&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;/select&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Résumé (500 mots max)
+*&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;textarea
+required&gt;&lt;/textarea&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Fichier (PDF ou Word)
+*&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;file&quot;
+accept=&quot;.pdf,.doc,.docx&quot; required&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;button type=&quot;submit&quot;
+class=&quot;btn btn-primary&quot;&gt;Envoyer le manuscrit&lt;/button&gt;</p>
+
+<p class=MsoNormal>                &lt;/form&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Contact --&gt;</p>
+
+<p class=MsoNormal>        &lt;section id=&quot;contact&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128222;</span>
+Nous Contacter&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;mission-vision&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3&gt;Coordonnées&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; lareforme27@gmail.com&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;&lt;strong&gt;Téléphone:&lt;/strong&gt;
+75.79.54.44&lt;/p&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;p&gt;&lt;strong&gt;WhatsApp:&lt;/strong&gt; 71.67.18.01&lt;/p&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;p&gt;&lt;strong&gt;Localisation:&lt;/strong&gt; Koudougou, secteur 9,
+Burkina Faso&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3&gt;Paiements Mobile
+Money&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;&lt;strong&gt;Orange
+Money:&lt;/strong&gt; 75.79.54.44&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;&lt;strong&gt;Moov
+Money:&lt;/strong&gt; 71.67.18.01&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3 style=&quot;margin-top:
+1rem;&quot;&gt;Réseaux Sociaux&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;Facebook | WhatsApp Business |
+LinkedIn&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;card&quot;
+style=&quot;margin-top: 2rem;&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3&gt;Formulaire de Contact&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;form id=&quot;contactForm&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Nom *&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;text&quot;
+required&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Email *&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;input type=&quot;email&quot;
+required&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;label&gt;Message *&lt;/label&gt;</p>
+
+<p class=MsoNormal>                        &lt;textarea required&gt;&lt;/textarea&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;button type=&quot;submit&quot;
+class=&quot;btn btn-primary&quot;&gt;Envoyer&lt;/button&gt;</p>
+
+<p class=MsoNormal>                &lt;/form&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/section&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        &lt;!-- Newsletter --&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;newsletter&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h3&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128231;</span>
+Newsletter&lt;/h3&gt;</p>
+
+<p class=MsoNormal>            &lt;p&gt;Restez informé de nos nouveautés et
+actualités&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;form class=&quot;newsletter-form&quot;
+id=&quot;newsletterForm&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;input type=&quot;email&quot;
+placeholder=&quot;Votre email&quot; required&gt;</p>
+
+<p class=MsoNormal>                &lt;button type=&quot;submit&quot;
+class=&quot;btn btn-secondary&quot;&gt;S'inscrire&lt;/button&gt;</p>
+
+<p class=MsoNormal>            &lt;/form&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- Cart Modal --&gt;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;cart-modal&quot;
+id=&quot;cartModal&quot;&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;cart-content&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;h2&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128722;</span>
+Mon Panier&lt;/h2&gt;</p>
+
+<p class=MsoNormal>            &lt;div id=&quot;cartItems&quot;&gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div style=&quot;margin-top: 2rem;
+padding-top: 1rem; border-top: 2px solid var(--border-gray);&quot;&gt;</p>
+
+<p class=MsoNormal>               
+&lt;p&gt;&lt;strong&gt;Sous-total:&lt;/strong&gt; &lt;span
+id=&quot;cartSubtotal&quot;&gt;0&lt;/span&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;&lt;strong&gt;Frais de
+livraison:&lt;/strong&gt; &lt;span
+id=&quot;shippingFee&quot;&gt;Gratuit&lt;/span&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;p style=&quot;font-size:
+1.5rem;&quot;&gt;&lt;strong&gt;Total:&lt;/strong&gt; &lt;span
+id=&quot;cartTotal&quot;&gt;0&lt;/span&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;form-group&quot;
+style=&quot;margin-top: 1rem;&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label&gt;Pays de
+livraison&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;select
+id=&quot;shippingCountry&quot; onchange=&quot;updateShipping()&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;BF&quot;&gt;Burkina Faso (Gratuit)&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option value=&quot;international&quot;&gt;International&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;/select&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;form-group&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;label&gt;Mode de
+paiement&lt;/label&gt;</p>
+
+<p class=MsoNormal>                    &lt;select
+id=&quot;paymentMethod&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;orange&quot;&gt;Orange Money&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;moov&quot;&gt;Moov Money&lt;/option&gt;</p>
+
+<p class=MsoNormal>                        &lt;option
+value=&quot;paypal&quot;&gt;PayPal&lt;/option&gt;</p>
+
+<p class=MsoNormal>                    &lt;/select&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;button class=&quot;btn btn-primary&quot;
+onclick=&quot;processPayment()&quot; style=&quot;width: 100%; margin-top:
+1rem;&quot;&gt;Procéder au paiement&lt;/button&gt;</p>
+
+<p class=MsoNormal>                &lt;button class=&quot;btn
+btn-secondary&quot; onclick=&quot;toggleCart()&quot; style=&quot;width: 100%;
+margin-top: 0.5rem;&quot;&gt;Continuer mes achats&lt;/button&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;!-- Footer --&gt;</p>
+
+<p class=MsoNormal>    &lt;footer&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;footer-content&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;footer-section&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3&gt;Les Editions la Reforme&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;Révolutionnons le Monde de la
+Littérature&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;Koudougou, Burkina Faso&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;footer-section&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3&gt;Liens Rapides&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;a
+href=&quot;#accueil&quot;&gt;Accueil&lt;/a&gt;</p>
+
+<p class=MsoNormal>                &lt;a
+href=&quot;#catalogue&quot;&gt;Catalogue&lt;/a&gt;</p>
+
+<p class=MsoNormal>                &lt;a
+href=&quot;#auteurs&quot;&gt;Auteurs&lt;/a&gt;</p>
+
+<p class=MsoNormal>                &lt;a
+href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;footer-section&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3&gt;Informations&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;a href=&quot;#mentions&quot;&gt;Mentions
+légales&lt;/a&gt;</p>
+
+<p class=MsoNormal>                &lt;a href=&quot;#cgv&quot;&gt;CGV&lt;/a&gt;</p>
+
+<p class=MsoNormal>                &lt;a href=&quot;#presse&quot;&gt;Kit
+Presse&lt;/a&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>            &lt;div class=&quot;footer-section&quot;&gt;</p>
+
+<p class=MsoNormal>                &lt;h3&gt;Contact&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;Email: lareforme27@gmail.com&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;Tél: 75.79.54.44&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;p&gt;WhatsApp: 71.67.18.01&lt;/p&gt;</p>
+
+<p class=MsoNormal>            &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>        &lt;div class=&quot;footer-bottom&quot;&gt;</p>
+
+<p class=MsoNormal>            &lt;p&gt;&amp;copy; 2026 Les Editions la
+Reforme. Tous droits réservés.&lt;/p&gt;</p>
+
+<p class=MsoNormal>        &lt;/div&gt;</p>
+
+<p class=MsoNormal>    &lt;/footer&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;script&gt;</p>
+
+<p class=MsoNormal>        // Data</p>
+
+<p class=MsoNormal>        const exchangeRates = {</p>
+
+<p class=MsoNormal>            FCFA: 1,</p>
+
+<p class=MsoNormal>            USD: 0.0016,</p>
+
+<p class=MsoNormal>            EUR: 0.0015,</p>
+
+<p class=MsoNormal>            GBP: 0.0013,</p>
+
+<p class=MsoNormal>            CAD: 0.0022,</p>
+
+<p class=MsoNormal>            NGN: 1.35</p>
+
+<p class=MsoNormal>        };</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        let currentCurrency = 'FCFA';</p>
+
+<p class=MsoNormal>        let cart = [];</p>
+
+<p class=MsoNormal>        let currentSlide = 0;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        const books = [</p>
+
+<p class=MsoNormal>            { id: 1, title: 'Le Souffle du Sahel', author:
+'Aminata Traoré', genre: 'roman', price: 5000, year: 2024, format: ['physical',
+'pdf'] },</p>
+
+<p class=MsoNormal>            { id: 2, title: 'Poèmes du Crépuscule', author:
+'Boubacar Zongo', genre: 'poesie', price: 3500, year: 2023, format:
+['physical', 'pdf'] },</p>
+
+<p class=MsoNormal>            { id: 3, title: 'Essai sur la Démocratie',
+author: 'Salif Diallo', genre: 'essai', price: 6000, year: 2024, format:
+['physical'] },</p>
+
+<p class=MsoNormal>            { id: 4, title: 'Contes de Koudougou', author:
+'Marie Ouedraogo', genre: 'jeunesse', price: 4000, year: 2023, format:
+['physical', 'pdf'] },</p>
+
+<p class=MsoNormal>            { id: 5, title: 'Les Gardiens de la Savane',
+author: 'Ibrahim Sankara', genre: 'roman', price: 5500, year: 2024, format:
+['physical', 'pdf'] },</p>
+
+<p class=MsoNormal>            { id: 6, title: 'Vers l\'Aube Nouvelle', author:
+'Fatou Compaoré', genre: 'poesie', price: 3000, year: 2024, format: ['pdf'] }</p>
+
+<p class=MsoNormal>        ];</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        const authors = [</p>
+
+<p class=MsoNormal>            { name: 'Aminata Traoré', bio: 'Romancière
+reconnue, spécialisée dans la littérature contemporaine africaine.', books:
+['Le Souffle du Sahel'] },</p>
+
+<p class=MsoNormal>            { name: 'Boubacar Zongo', bio: 'Poète et
+conteur, célèbre pour ses œuvres inspirées du folklore burkinabè.', books:
+['Poèmes du Crépuscule'] },</p>
+
+<p class=MsoNormal>            { name: 'Salif Diallo', bio: 'Essayiste et
+philosophe, engagé dans les questions de démocratie.', books: ['Essai sur la
+Démocratie'] },</p>
+
+<p class=MsoNormal>            { name: 'Marie Ouedraogo', bio: 'Auteure
+jeunesse primée, passionnée par les contes traditionnels.', books: ['Contes de
+Koudougou'] }</p>
+
+<p class=MsoNormal>        ];</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        const blogPosts = [</p>
+
+<p class=MsoNormal>            { title: 'Dédicace à Ouagadougou', date: '15
+janvier 2025', excerpt: 'Rencontre avec nos auteurs lors du salon du livre.' },</p>
+
+<p class=MsoNormal>            { title: 'Concours de nouvelles 2025', date: '10
+janvier 2025', excerpt: 'Participez à notre concours annuel de nouvelles.' },</p>
+
+<p class=MsoNormal>            { title: 'Nouveau partenariat', date: '5 janvier
+2025', excerpt: 'Les Editions la Reforme s\'associent avec des librairies
+locales.' }</p>
+
+<p class=MsoNormal>        ];</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        const events = [</p>
+
+<p class=MsoNormal>            { title: 'Salon du Livre de Ouagadougou', date:
+'15-20 février 2025', location: 'Ouagadougou' },</p>
+
+<p class=MsoNormal>            { title: 'Atelier d\'écriture créative', date:
+'5 mars 2025', location: 'Koudougou' },</p>
+
+<p class=MsoNormal>            { title: 'Dédicace - Aminata Traoré', date: '12
+mars 2025', location: 'Bobo-Dioulasso' }</p>
+
+<p class=MsoNormal>        ];</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        const formations = [</p>
+
+<p class=MsoNormal>            { title: 'Atelier d\'écriture créative',
+description: 'Apprenez les bases de l\'écriture créative avec nos experts.',
+duration: '4 semaines', price: 25000 },</p>
+
+<p class=MsoNormal>            { title: 'Masterclass : Roman africain',
+description: 'Découvrez les spécificités du roman africain contemporain.',
+duration: '2 jours', price: 15000 },</p>
+
+<p class=MsoNormal>            { title: 'Formation édition numérique',
+description: 'Maîtrisez les outils de publication numérique.', duration: '3
+semaines', price: 30000 }</p>
+
+<p class=MsoNormal>        ];</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Initialize</p>
+
+<p class=MsoNormal>        function init() {</p>
+
+<p class=MsoNormal>            renderBooks();</p>
+
+<p class=MsoNormal>            renderAuthors();</p>
+
+<p class=MsoNormal>            renderBlog();</p>
+
+<p class=MsoNormal>            renderEvents();</p>
+
+<p class=MsoNormal>            renderFormations();</p>
+
+<p class=MsoNormal>            startCarousel();</p>
+
+<p class=MsoNormal>            loadCart();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Carousel</p>
+
+<p class=MsoNormal>        function startCarousel() {</p>
+
+<p class=MsoNormal>            setInterval(() =&gt; {</p>
+
+<p class=MsoNormal>                currentSlide = (currentSlide + 1) % 3;</p>
+
+<p class=MsoNormal>                goToSlide(currentSlide);</p>
+
+<p class=MsoNormal>            }, 5000);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function goToSlide(n) {</p>
+
+<p class=MsoNormal>            currentSlide = n;</p>
+
+<p class=MsoNormal>            const carousel =
+document.getElementById('carouselInner');</p>
+
+<p class=MsoNormal>            carousel.style.transform = `translateX(-${n *
+100}%)`;</p>
+
+<p class=MsoNormal>            document.querySelectorAll('.carousel-dot').forEach((dot,
+i) =&gt; {</p>
+
+<p class=MsoNormal>                dot.classList.toggle('active', i === n);</p>
+
+<p class=MsoNormal>            });</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Currency</p>
+
+<p class=MsoNormal>        function changeCurrency() {</p>
+
+<p class=MsoNormal>            currentCurrency =
+document.getElementById('currencySelect').value;</p>
+
+<p class=MsoNormal>            renderBooks();</p>
+
+<p class=MsoNormal>            updateCart();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function formatPrice(price) {</p>
+
+<p class=MsoNormal>            const converted = price *
+exchangeRates[currentCurrency];</p>
+
+<p class=MsoNormal>            const symbols = { FCFA: ' FCFA', USD: ', EUR:
+'€', GBP: '£', CAD: 'CAD, NGN: '&#8358;' };</p>
+
+<p class=MsoNormal>            return currentCurrency === 'FCFA' ||
+currentCurrency === 'NGN' </p>
+
+<p class=MsoNormal>                ? Math.round(converted) +
+symbols[currentCurrency]</p>
+
+<p class=MsoNormal>                : symbols[currentCurrency] +
+converted.toFixed(2);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Render functions</p>
+
+<p class=MsoNormal>        function renderBooks() {</p>
+
+<p class=MsoNormal>            const grid =
+document.getElementById('booksGrid');</p>
+
+<p class=MsoNormal>            const genre =
+document.getElementById('genreFilter').value;</p>
+
+<p class=MsoNormal>            const search =
+document.getElementById('searchBooks').value.toLowerCase();</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            const filtered = books.filter(book =&gt; {</p>
+
+<p class=MsoNormal>                const matchGenre = !genre || book.genre ===
+genre;</p>
+
+<p class=MsoNormal>                const matchSearch = !search ||
+book.title.toLowerCase().includes(search) ||
+book.author.toLowerCase().includes(search);</p>
+
+<p class=MsoNormal>                return matchGenre &amp;&amp; matchSearch;</p>
+
+<p class=MsoNormal>            });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>            grid.innerHTML = filtered.map(book =&gt; `</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;book-card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;book-image&quot;&gt;<span
+style='font-family:"Segoe UI Symbol",sans-serif'>&#128214;</span>
+${book.title}&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;book-info&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;h3&gt;${book.title}&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                       
+&lt;p&gt;&lt;strong&gt;Auteur:&lt;/strong&gt; ${book.author}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                       
+&lt;p&gt;&lt;strong&gt;Genre:&lt;/strong&gt; ${book.genre}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                       
+&lt;p&gt;&lt;strong&gt;Année:&lt;/strong&gt; ${book.year}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;div
+class=&quot;book-price&quot;&gt;${formatPrice(book.price)}&lt;/div&gt;</p>
+
+<p class=MsoNormal>                        ${book.format.includes('pdf') ?
+'&lt;p&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128229;</span>
+Format PDF disponible&lt;/p&gt;' : ''}</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;btn
+btn-primary&quot; onclick=&quot;addToCart(${book.id})&quot; style=&quot;width:
+100%;&quot;&gt;Ajouter au panier&lt;/button&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            `).join('');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function renderAuthors() {</p>
+
+<p class=MsoNormal>            const grid =
+document.getElementById('authorsGrid');</p>
+
+<p class=MsoNormal>            grid.innerHTML = authors.map(author =&gt; `</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;author-card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+class=&quot;author-image&quot;&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128100;</span>&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3&gt;${author.name}&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;${author.bio}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;p&gt;&lt;strong&gt;Ouvrages:&lt;/strong&gt; ${author.books.join(',
+')}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            `).join('');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function renderBlog() {</p>
+
+<p class=MsoNormal>            const grid = document.getElementById('blogGrid');</p>
+
+<p class=MsoNormal>            grid.innerHTML = blogPosts.map(post =&gt; `</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;blog-card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;blog-image&quot;&gt;<span
+style='font-family:"Segoe UI Symbol",sans-serif'>&#128240;</span>
+${post.title}&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+class=&quot;blog-content&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;h3&gt;${post.title}&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                       
+&lt;p&gt;&lt;strong&gt;${post.date}&lt;/strong&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;p&gt;${post.excerpt}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;btn
+btn-primary&quot;&gt;Lire la suite&lt;/button&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            `).join('');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function renderEvents() {</p>
+
+<p class=MsoNormal>            const grid =
+document.getElementById('eventsGrid');</p>
+
+<p class=MsoNormal>            grid.innerHTML = events.map(event =&gt; `</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;event-card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;div
+class=&quot;event-image&quot;&gt;<span style='font-family:"Segoe UI Symbol",sans-serif'>&#128197;</span>
+${event.title}&lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;event-info&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;h3&gt;${event.title}&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                       
+&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; ${event.date}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;p&gt;&lt;strong&gt;Lieu:&lt;/strong&gt;
+${event.location}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                        &lt;button class=&quot;btn
+btn-primary&quot;&gt;S'inscrire&lt;/button&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            `).join('');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function renderFormations() {</p>
+
+<p class=MsoNormal>            const grid =
+document.getElementById('formationsGrid');</p>
+
+<p class=MsoNormal>            grid.innerHTML = formations.map(formation =&gt;
+`</p>
+
+<p class=MsoNormal>                &lt;div class=&quot;formation-card&quot;&gt;</p>
+
+<p class=MsoNormal>                    &lt;h3&gt;${formation.title}&lt;/h3&gt;</p>
+
+<p class=MsoNormal>                    &lt;p&gt;${formation.description}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;p&gt;&lt;strong&gt;Durée:&lt;/strong&gt; ${formation.duration}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                   
+&lt;p&gt;&lt;strong&gt;Prix:&lt;/strong&gt;
+${formatPrice(formation.price)}&lt;/p&gt;</p>
+
+<p class=MsoNormal>                    &lt;button class=&quot;btn
+btn-primary&quot;&gt;S'inscrire&lt;/button&gt;</p>
+
+<p class=MsoNormal>                &lt;/div&gt;</p>
+
+<p class=MsoNormal>            `).join('');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function filterBooks() {</p>
+
+<p class=MsoNormal>            renderBooks();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Cart functions</p>
+
+<p class=MsoNormal>        function addToCart(bookId) {</p>
+
+<p class=MsoNormal>            const book = books.find(b =&gt; b.id ===
+bookId);</p>
+
+<p class=MsoNormal>            const existing = cart.find(item =&gt; item.id
+=== bookId);</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            if (existing) {</p>
+
+<p class=MsoNormal>                existing.quantity++;</p>
+
+<p class=MsoNormal>            } else {</p>
+
+<p class=MsoNormal>                cart.push({ ...book, quantity: 1 });</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            saveCart();</p>
+
+<p class=MsoNormal>            updateCart();</p>
+
+<p class=MsoNormal>            alert(`&quot;${book.title}&quot; ajouté au
+panier!`);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function removeFromCart(bookId) {</p>
+
+<p class=MsoNormal>            cart = cart.filter(item =&gt; item.id !==
+bookId);</p>
+
+<p class=MsoNormal>            saveCart();</p>
+
+<p class=MsoNormal>            updateCart();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function updateQuantity(bookId, delta) {</p>
+
+<p class=MsoNormal>            const item = cart.find(i =&gt; i.id === bookId);</p>
+
+<p class=MsoNormal>            if (item) {</p>
+
+<p class=MsoNormal>                item.quantity += delta;</p>
+
+<p class=MsoNormal>                if (item.quantity &lt;= 0) {</p>
+
+<p class=MsoNormal>                    removeFromCart(bookId);</p>
+
+<p class=MsoNormal>                } else {</p>
+
+<p class=MsoNormal>                    saveCart();</p>
+
+<p class=MsoNormal>                    updateCart();</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function updateCart() {</p>
+
+<p class=MsoNormal>            const count = cart.reduce((sum, item) =&gt; sum
++ item.quantity, 0);</p>
+
+<p class=MsoNormal>            document.getElementById('cartCount').textContent
+= count;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            const itemsDiv =
+document.getElementById('cartItems');</p>
+
+<p class=MsoNormal>            if (cart.length === 0) {</p>
+
+<p class=MsoNormal>                itemsDiv.innerHTML = '&lt;p&gt;Votre panier
+est vide&lt;/p&gt;';</p>
+
+<p class=MsoNormal>            } else {</p>
+
+<p class=MsoNormal>                itemsDiv.innerHTML = cart.map(item =&gt; `</p>
+
+<p class=MsoNormal>                    &lt;div class=&quot;cart-item&quot;&gt;</p>
+
+<p class=MsoNormal>                        &lt;div&gt;</p>
+
+<p class=MsoNormal>                           
+&lt;strong&gt;${item.title}&lt;/strong&gt;&lt;br&gt;</p>
+
+<p class=MsoNormal>                            ${formatPrice(item.price)} ×
+${item.quantity}</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                        &lt;div&gt;</p>
+
+<p class=MsoNormal>                            &lt;button
+onclick=&quot;updateQuantity(${item.id}, -1)&quot;&gt;-&lt;/button&gt;</p>
+
+<p class=MsoNormal>                            &lt;button onclick=&quot;updateQuantity(${item.id},
+1)&quot;&gt;+&lt;/button&gt;</p>
+
+<p class=MsoNormal>                            &lt;button
+onclick=&quot;removeFromCart(${item.id})&quot;&gt;<span style='font-family:
+"Segoe UI Symbol",sans-serif'>&#128465;</span>&#65039;&lt;/button&gt;</p>
+
+<p class=MsoNormal>                        &lt;/div&gt;</p>
+
+<p class=MsoNormal>                    &lt;/div&gt;</p>
+
+<p class=MsoNormal>                `).join('');</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            updateShipping();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function updateShipping() {</p>
+
+<p class=MsoNormal>            const subtotal = cart.reduce((sum, item) =&gt;
+item.price * item.quantity + sum, 0);</p>
+
+<p class=MsoNormal>            const country =
+document.getElementById('shippingCountry').value;</p>
+
+<p class=MsoNormal>            const bookCount = cart.reduce((sum, item) =&gt;
+sum + item.quantity, 0);</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            let shipping = 0;</p>
+
+<p class=MsoNormal>            if (country === 'international') {</p>
+
+<p class=MsoNormal>                shipping = bookCount &gt;= 10 ? 0 : 5000;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            const total = subtotal + shipping;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>           
+document.getElementById('cartSubtotal').textContent = formatPrice(subtotal);</p>
+
+<p class=MsoNormal>           
+document.getElementById('shippingFee').textContent = shipping === 0 ? 'Gratuit'
+: formatPrice(shipping);</p>
+
+<p class=MsoNormal>            document.getElementById('cartTotal').textContent
+= formatPrice(total);</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function toggleCart() {</p>
+
+<p class=MsoNormal>            const modal =
+document.getElementById('cartModal');</p>
+
+<p class=MsoNormal>            modal.style.display = modal.style.display ===
+'block' ? 'none' : 'block';</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function saveCart() {</p>
+
+<p class=MsoNormal>            try {</p>
+
+<p class=MsoNormal>                const cartData = JSON.stringify(cart);</p>
+
+<p class=MsoNormal>                document.cookie = `cart=${cartData}; path=/;
+max-age=604800`;</p>
+
+<p class=MsoNormal>            } catch (e) {</p>
+
+<p class=MsoNormal>                console.log('Cart saved in session');</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function loadCart() {</p>
+
+<p class=MsoNormal>            try {</p>
+
+<p class=MsoNormal>                const cookies = document.cookie.split(';');</p>
+
+<p class=MsoNormal>                const cartCookie = cookies.find(c =&gt;
+c.trim().startsWith('cart='));</p>
+
+<p class=MsoNormal>                if (cartCookie) {</p>
+
+<p class=MsoNormal>                    cart =
+JSON.parse(cartCookie.split('=')[1]);</p>
+
+<p class=MsoNormal>                    updateCart();</p>
+
+<p class=MsoNormal>                }</p>
+
+<p class=MsoNormal>            } catch (e) {</p>
+
+<p class=MsoNormal>                cart = [];</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function processPayment() {</p>
+
+<p class=MsoNormal>            if (cart.length === 0) {</p>
+
+<p class=MsoNormal>                alert('Votre panier est vide!');</p>
+
+<p class=MsoNormal>                return;</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            const method =
+document.getElementById('paymentMethod').value;</p>
+
+<p class=MsoNormal>            const total = cart.reduce((sum, item) =&gt;
+item.price * item.quantity + sum, 0);</p>
+
+<p class=MsoNormal>            const country =
+document.getElementById('shippingCountry').value;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            let methodName = method === 'orange' ? 'Orange
+Money' : method === 'moov' ? 'Moov Money' : 'PayPal';</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            alert(`Paiement de ${formatPrice(total)} via
+${methodName}\n\nCommande confirmée! Vous recevrez un email de confirmation
+avec les détails de livraison.`);</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Generate invoice</p>
+
+<p class=MsoNormal>            generateInvoice();</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            // Clear cart</p>
+
+<p class=MsoNormal>            cart = [];</p>
+
+<p class=MsoNormal>            saveCart();</p>
+
+<p class=MsoNormal>            updateCart();</p>
+
+<p class=MsoNormal>            toggleCart();</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        function generateInvoice() {</p>
+
+<p class=MsoNormal>            const invoiceContent = `</p>
+
+<p class=MsoNormal>FACTURE - Les Editions la Reforme</p>
+
+<p class=MsoNormal>================================</p>
+
+<p class=MsoNormal>Date: ${new Date().toLocaleDateString('fr-FR')}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Articles:</p>
+
+<p class=MsoNormal>${cart.map(item =&gt; `- ${item.title} × ${item.quantity}:
+${formatPrice(item.price * item.quantity)}`).join('\n')}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Total: ${formatPrice(cart.reduce((sum, item) =&gt;
+item.price * item.quantity + sum, 0))}</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Merci de votre commande!</p>
+
+<p class=MsoNormal>            `;</p>
+
+<p class=MsoNormal>            </p>
+
+<p class=MsoNormal>            console.log('Facture générée:', invoiceContent);</p>
+
+<p class=MsoNormal>            alert('Facture générée! (Consultez la console
+pour les détails)');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Forms</p>
+
+<p class=MsoNormal>       
+document.getElementById('manuscriptForm').addEventListener('submit', (e) =&gt;
+{</p>
+
+<p class=MsoNormal>            e.preventDefault();</p>
+
+<p class=MsoNormal>            alert('Merci pour votre soumission! Nous
+examinerons votre manuscrit et vous contacterons sous 30 jours par email et
+WhatsApp.');</p>
+
+<p class=MsoNormal>            e.target.reset();</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>       
+document.getElementById('contactForm').addEventListener('submit', (e) =&gt; {</p>
+
+<p class=MsoNormal>            e.preventDefault();</p>
+
+<p class=MsoNormal>            alert('Message envoyé! Nous vous répondrons dans
+les plus brefs délais.');</p>
+
+<p class=MsoNormal>            e.target.reset();</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>       
+document.getElementById('newsletterForm').addEventListener('submit', (e) =&gt;
+{</p>
+
+<p class=MsoNormal>            e.preventDefault();</p>
+
+<p class=MsoNormal>            alert('Inscription réussie! Vous recevrez nos
+prochaines newsletters.');</p>
+
+<p class=MsoNormal>            e.target.reset();</p>
+
+<p class=MsoNormal>        });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Mobile menu</p>
+
+<p class=MsoNormal>        function toggleMenu() {</p>
+
+<p class=MsoNormal>           
+document.getElementById('navLinks').classList.toggle('active');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // WhatsApp</p>
+
+<p class=MsoNormal>        function openWhatsApp() {</p>
+
+<p class=MsoNormal>            window.open('https://wa.me/22671671801',
+'_blank');</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Close cart when clicking outside</p>
+
+<p class=MsoNormal>        window.onclick = function(event) {</p>
+
+<p class=MsoNormal>            const modal =
+document.getElementById('cartModal');</p>
+
+<p class=MsoNormal>            if (event.target === modal) {</p>
+
+<p class=MsoNormal>                modal.style.display = 'none';</p>
+
+<p class=MsoNormal>            }</p>
+
+<p class=MsoNormal>        }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>        // Initialize on load</p>
+
+<p class=MsoNormal>        document.addEventListener('DOMContentLoaded', init);</p>
+
+<p class=MsoNormal>document.querySelectorAll('.tab').forEach(tab =&gt; {</p>
+
+<p class=MsoNormal>  tab.addEventListener('click', () =&gt; {</p>
+
+<p class=MsoNormal>    document.querySelectorAll('.tab, .tab-content')</p>
+
+<p class=MsoNormal>      .forEach(el =&gt; el.classList.remove('active'));</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    tab.classList.add('active');</p>
+
+<p class=MsoNormal>   
+document.getElementById(tab.dataset.tab).classList.add('active');</p>
+
+<p class=MsoNormal>  });</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>    &lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
 </body>
+
 </html>
